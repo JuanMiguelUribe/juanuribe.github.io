@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan Uribe | IA & Marketing</title>
   <meta name="description" content="Ayudo a negocios a multiplicar resultados usando IA. Video, marketing y automatización real." />
+  <!-- SEO & Open Graph -->
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Juan Uribe" />
+  <meta property="og:title" content="Juan Uribe | IA & Marketing" />
+  <meta property="og:description" content="Ayudo a negocios a automatizar procesos, crear contenido de marca y producir videos — en minutos, no en horas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://juanmigueluribe.github.io/" />
+  <meta property="og:image" content="https://juanmigueluribe.github.io/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Juan Uribe | IA & Marketing" />
+  <meta name="twitter:description" content="Automatización, video e IA para negocios reales. Colombia." />
+  <link rel="canonical" href="https://juanmigueluribe.github.io/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -812,10 +824,104 @@
       transform: translateY(0);
     }
 
+    /* ─── HAMBURGER MENU ─── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--green);
+      transition: all 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 69px;
+      left: 0; right: 0;
+      background: rgba(6,9,15,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,255,65,0.15);
+      padding: 24px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--white-dim);
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(0,255,65,0.07);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover { color: var(--green); }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    /* ─── FLOATING WHATSAPP ─── */
+    .wa-float {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #25d366;
+      color: #000;
+      text-decoration: none;
+      padding: 14px 22px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+      transition: all 0.3s;
+      animation: floatPulse 3s ease-in-out infinite;
+    }
+
+    .wa-float:hover {
+      background: #1fb855;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(37,211,102,0.5);
+    }
+
+    .wa-float-icon { font-size: 20px; }
+
+    @keyframes floatPulse {
+      0%, 100% { box-shadow: 0 8px 32px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 8px 48px rgba(37,211,102,0.7); }
+    }
+
+    /* ─── COUNTER ANIMATION ─── */
+    .count-animated { display: inline; }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       nav { padding: 20px 24px; }
       .nav-links { display: none; }
+      .hamburger { display: flex; }
       #hero { padding: 60px 24px; }
       .hero-stats { gap: 24px; flex-wrap: wrap; }
       .guides-grid { grid-template-columns: 1fr; }
@@ -824,6 +930,7 @@
       #guides, #services, #results, #social, #contact { padding: 60px 24px; }
       .form-container { padding: 32px 24px; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
+      .wa-float { bottom: 20px; right: 16px; padding: 12px 16px; font-size: 11px; }
     }
   </style>
 </head>
@@ -839,14 +946,25 @@
       <li><a href="#contact">Contacto</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Trabajemos</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- Mobile nav -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#guides" onclick="closeMobileMenu()">Guías</a>
+    <a href="#services" onclick="closeMobileMenu()">Servicios</a>
+    <a href="#results" onclick="closeMobileMenu()">Resultados</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contacto</a>
+  </div>
 
   <!-- ─── HERO ─── -->
   <section id="hero">
     <div class="hero-glow"></div>
     <div class="hero-glow-2"></div>
     <div class="hero-content">
-      <div class="hero-tag">IA & Marketing</div>
+      <div class="hero-tag">IA & Marketing — Colombia</div>
       <h1>Multiplico<br/>resultados<br/>con <span class="accent">IA</span><span class="cursor"></span></h1>
       <p class="hero-sub">
         Ayudo a negocios a automatizar procesos, crear contenido de marca y producir videos — en minutos, no en horas.
@@ -857,11 +975,11 @@
           <div class="stat-label">Producción real</div>
         </div>
         <div class="stat">
-          <div class="stat-num">+200</div>
+          <div class="stat-num" data-count="200" data-prefix="+">+200</div>
           <div class="stat-label">Clicks/día</div>
         </div>
         <div class="stat">
-          <div class="stat-num">100%</div>
+          <div class="stat-num" data-count="100" data-suffix="%">100%</div>
           <div class="stat-label">Con IA</div>
         </div>
       </div>
@@ -982,11 +1100,11 @@
           <div class="result-desc">Producción de contenido que tardaba horas, ahora en minutos</div>
         </div>
         <div class="result-item">
-          <div class="result-num">+200</div>
+          <div class="result-num" data-count="200" data-prefix="+">+200</div>
           <div class="result-desc">Clicks diarios generados para ventas de eventos de un cliente</div>
         </div>
         <div class="result-item">
-          <div class="result-num">0h</div>
+          <div class="result-num" data-count="0" data-suffix="h">0h</div>
           <div class="result-desc">Horas de papeleo manual eliminadas con automatización de procesos</div>
         </div>
       </div>
@@ -1019,7 +1137,7 @@
       <h2>¿Listo para<br/>trabajar con IA?</h2>
       <p>Si quieres automatizar tu negocio, mejorar tu producción de contenido o simplemente hablar de lo que la IA puede hacer por ti — escríbeme directamente.</p>
       <div class="contact-actions">
-        <a href="https://wa.me/573000000000?text=Hola%20Juan,%20vi%20tu%20página%20y%20quiero%20saber%20más" target="_blank" class="whatsapp-btn">
+        <a href="https://wa.me/573153730092?text=Hola%20Juan,%20vi%20tu%20página%20y%20quiero%20saber%20más" target="_blank" class="whatsapp-btn">
           💬 Escribir por WhatsApp
         </a>
         <a href="#guides" class="btn-secondary">Ver guías gratis</a>
@@ -1027,10 +1145,16 @@
     </div>
   </section>
 
+  <!-- ─── FLOATING WHATSAPP ─── -->
+  <a href="https://wa.me/573153730092?text=Hola%20Juan,%20vi%20tu%20página%20y%20quiero%20saber%20más" target="_blank" class="wa-float" aria-label="Escribir por WhatsApp">
+    <span class="wa-float-icon">💬</span>
+    <span>WhatsApp</span>
+  </a>
+
   <!-- ─── FOOTER ─── -->
   <footer>
     <div class="footer-logo">Juan Uribe</div>
-    <div class="footer-copy">© 2026 — IA & Marketing</div>
+    <div class="footer-copy">© 2026 — IA & Marketing — Colombia</div>
   </footer>
 
   <script>
@@ -1044,6 +1168,53 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ─── HAMBURGER MENU ───
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMobileMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    // ─── COUNTER ANIMATION ───
+    function animateCounter(el) {
+      if (el.dataset.animated) return;
+      el.dataset.animated = 'true';
+
+      const target = parseInt(el.dataset.count);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 1600;
+      const start = performance.now();
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(ease * target);
+        el.textContent = prefix + current + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && e.target.dataset.count !== undefined) {
+          animateCounter(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 
     // ─── FORM SUBMIT ───
     async function submitForm() {
