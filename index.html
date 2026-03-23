@@ -285,6 +285,140 @@
       color: var(--green);
     }
 
+    /* ─── FEATURED HIGHLIGHT SECTION ─── */
+    #featured {
+      padding: 80px 48px;
+      background: linear-gradient(180deg, var(--black) 0%, var(--navy) 100%);
+      border-top: 1px solid rgba(0,255,65,0.15);
+      border-bottom: 1px solid rgba(0,255,65,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #featured::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,255,65,0.08) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .featured-container {
+      max-width: 900px;
+      margin: 0 auto;
+      border: 2px solid var(--green);
+      padding: 56px 48px;
+      background: rgba(6,9,15,0.8);
+      backdrop-filter: blur(20px);
+      position: relative;
+      animation: pulse-border 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-border {
+      0%, 100% { box-shadow: 0 0 30px rgba(0,255,65,0.3); }
+      50% { box-shadow: 0 0 50px rgba(0,255,65,0.5); }
+    }
+
+    .featured-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--green), transparent);
+    }
+
+    .featured-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 6px 16px;
+      background: var(--green);
+      color: var(--black);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 24px;
+      animation: blink-badge 2s ease-in-out infinite;
+    }
+
+    @keyframes blink-badge {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .featured-content {
+      text-align: center;
+    }
+
+    .featured-icon {
+      font-size: 56px;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .featured-title {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .featured-title .highlight {
+      color: var(--green);
+      position: relative;
+      display: inline-block;
+    }
+
+    .featured-desc {
+      font-size: 17px;
+      color: var(--white-dim);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      font-weight: 300;
+    }
+
+    .featured-cta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 20px 48px;
+      background: var(--green);
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 32px rgba(0,255,65,0.4);
+    }
+
+    .featured-cta:hover {
+      background: #00cc34;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 48px rgba(0,255,65,0.6);
+    }
+
+    .featured-note {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--green);
+      letter-spacing: 2px;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
     /* ─── SECTION COMMON ─── */
     .section-label {
       font-family: 'JetBrains Mono', monospace;
@@ -924,6 +1058,8 @@
       .hamburger { display: flex; }
       #hero { padding: 60px 24px; }
       .hero-stats { gap: 24px; flex-wrap: wrap; }
+      #featured { padding: 60px 24px; }
+      .featured-container { padding: 40px 28px; }
       .guides-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr; }
       .results-grid { grid-template-columns: 1fr; }
@@ -986,6 +1122,26 @@
       <div class="hero-actions">
         <a href="#guides" class="btn-primary">↓ Guías gratis</a>
         <a href="#services" class="btn-secondary">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURED HIGHLIGHT ─── -->
+  <section id="featured">
+    <div class="featured-container fade-in">
+      <div class="featured-content">
+        <span class="featured-badge">🔥 Nuevo recurso gratis</span>
+        <span class="featured-icon">📸</span>
+        <h2 class="featured-title">
+          Transforma fotos de productos<br/>en publicidad <span class="highlight">nivel Hollywood</span>
+        </h2>
+        <p class="featured-desc">
+          El prompt completo + guía paso a paso para convertir cualquier foto de producto en anuncio profesional usando IA. Sin fotógrafo. Sin producción. Solo un prompt.
+        </p>
+        <a href="https://drive.google.com/file/d/1fCTSggOJ6U7pu9TWRM_bC2EglcOgmagn/view?usp=sharing" target="_blank" class="featured-cta">
+          → Descargar prompt gratis
+        </a>
+        <p class="featured-note">✓ Incluye plantilla editable + ejemplos reales</p>
       </div>
     </div>
   </section>
