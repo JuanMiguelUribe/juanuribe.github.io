@@ -489,6 +489,70 @@
       color: var(--text-dim);
     }
 
+    /* Showcase */
+    .showcase { padding: 80px 0; }
+    .showcase-demo {
+      margin-top: 40px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      align-items: start;
+    }
+    .demo-card {
+      background: var(--glass-strong);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-glass);
+      transition: all 0.3s;
+    }
+    .demo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .demo-media {
+      width: 100%; display: block;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .demo-media img { width: 100%; display: block; }
+    .demo-media video { width: 100%; display: block; }
+    .demo-info { padding: 20px 24px; }
+    .demo-step {
+      font-family: 'JetBrains Mono', monospace; font-size: 10px;
+      color: var(--accent); letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .demo-title {
+      font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700;
+      color: var(--text); margin-bottom: 6px;
+    }
+    .demo-desc {
+      font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.55;
+    }
+    .demo-tools {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;
+    }
+    .demo-tool-pill {
+      font-family: 'JetBrains Mono', monospace; font-size: 10px;
+      padding: 3px 10px; border-radius: 6px;
+      background: var(--accent-bg); color: var(--accent);
+      border: 1px solid var(--accent-border); letter-spacing: 0.5px;
+    }
+    .demo-notice {
+      margin-top: 20px;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .demo-notice-icon { font-size: 24px; flex-shrink: 0; }
+    .demo-notice-text {
+      font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.5;
+    }
+    .demo-notice-text strong { color: var(--text); font-weight: 600; }
+
+    @media (max-width: 900px) {
+      .showcase-demo { grid-template-columns: 1fr; }
+    }
+
     /* Divider */
     .divider {
       height: 1px; max-width: 1120px; margin: 0 auto;
@@ -552,6 +616,7 @@
   <span class="nav-tag">Guía Gratuita · Junio 2026</span>
   <div class="nav-links">
     <a href="#pipeline">Pipeline</a>
+    <a href="#ejemplo">Ejemplo</a>
     <a href="#herramientas">Herramientas</a>
     <a href="#usecases">Casos de uso</a>
     <a href="#tips">Tips pro</a>
@@ -607,6 +672,51 @@
         <div class="pipe-title">Publica</div>
         <div class="pipe-desc">Edita, agrega subtítulos automáticos y publica en todas tus plataformas desde un solo lugar.</div>
       </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SHOWCASE -->
+  <section class="showcase fade-up" id="ejemplo">
+    <div class="section-label">Ejemplo real</div>
+    <div class="section-title">De un prompt a un video de marca</div>
+    <div class="section-desc">Esto es Florencia — un avatar creado 100% con IA. La foto se generó con un prompt, y el video se animó a partir de esa imagen.</div>
+
+    <div class="showcase-demo">
+      <div class="demo-card">
+        <div class="demo-media">
+          <img src="assets/florencia-foto.jpg" alt="Avatar IA — Florencia — foto generada con prompt" loading="lazy" />
+        </div>
+        <div class="demo-info">
+          <div class="demo-step">Paso 1 — Imagen</div>
+          <div class="demo-title">Foto generada con un prompt</div>
+          <div class="demo-desc">Un prompt detallado con iluminación, ángulo, texturas, outfit y mood genera una foto que parece sesión profesional real. Cero cámara.</div>
+          <div class="demo-tools">
+            <span class="demo-tool-pill">Nano Banana Pro</span>
+            <span class="demo-tool-pill">Prompt detallado</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-card">
+        <div class="demo-media">
+          <video src="assets/florencia-video.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="demo-info">
+          <div class="demo-step">Paso 2 — Video</div>
+          <div class="demo-title">Animación cinematográfica</div>
+          <div class="demo-desc">La misma imagen se convierte en video con movimiento natural, expresión facial y audio. Parece contenido grabado de verdad.</div>
+          <div class="demo-tools">
+            <span class="demo-tool-pill">Kling 3.0</span>
+            <span class="demo-tool-pill">Image to Video</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-notice">
+      <div class="demo-notice-icon">🤯</div>
+      <div class="demo-notice-text"><strong>Esta persona no existe.</strong> Florencia es un personaje 100% generado con IA — la foto, el movimiento, todo. Así se ve el contenido de marca cuando usas las herramientas correctas.</div>
     </div>
   </section>
 
