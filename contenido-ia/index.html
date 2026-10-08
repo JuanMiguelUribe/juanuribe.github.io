@@ -1,1027 +1,805 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contenido para tu Marca con IA — Guía Completa 2026 | juanuribe.ia</title>
-  <meta name="description" content="Guía paso a paso para crear contenido profesional para tu marca usando inteligencia artificial. Fotos, video, voz y más — sin producción tradicional." />
-  <meta property="og:title" content="Contenido para tu Marca con IA — Guía 2026" />
-  <meta property="og:description" content="Aprende a crear fotos, videos y contenido profesional para tu marca sin fotógrafo, sin estudio y sin modelo." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #f4f1ed;
-      --bg-warm: #ece8e1;
-      --surface: rgba(255,255,255,0.72);
-      --surface-solid: #ffffff;
-      --glass: rgba(255,255,255,0.55);
-      --glass-border: rgba(255,255,255,0.85);
-      --glass-strong: rgba(255,255,255,0.82);
-      --text: #1a1a1a;
-      --text-mid: #4a4a4a;
-      --text-dim: #8a8a8a;
-      --accent: #2d6a4f;
-      --accent-light: #40916c;
-      --accent-bg: rgba(45,106,79,0.08);
-      --accent-border: rgba(45,106,79,0.18);
-      --blue: #1a73e8;
-      --blue-bg: rgba(26,115,232,0.07);
-      --purple: #7c3aed;
-      --purple-bg: rgba(124,58,237,0.07);
-      --orange: #ea580c;
-      --orange-bg: rgba(234,88,12,0.07);
-      --rose: #e11d48;
-      --rose-bg: rgba(225,29,72,0.06);
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
-      --shadow-md: 0 4px 20px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-      --shadow-glass: 0 8px 32px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.6);
-      --radius: 20px;
-      --radius-sm: 12px;
-      --radius-pill: 100px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body { 
-      background: var(--bg); 
-      color: var(--text); 
-      font-family: 'Outfit', -apple-system, sans-serif; 
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Contenido para tu Marca con IA. Guía Completa 2026 | juanuribe.ia
+    </title>
+    <meta
+      name="description"
+      content="Guía paso a paso para crear contenido profesional para tu marca usando inteligencia artificial. Fotos, video, voz y más. sin producción tradicional."
+    />
+    <meta
+      property="og:title"
+      content="Contenido para tu Marca con IA. Guía 2026"
+    />
+    <meta
+      property="og:description"
+      content="Aprende a crear fotos, videos y contenido profesional para tu marca sin fotógrafo, sin estudio y sin modelo."
+    />
 
-    /* Ambient background */
-    .ambient-bg {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none; z-index: 0;
-      background: 
-        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(45,106,79,0.06) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(26,115,232,0.05) 0%, transparent 50%),
-        radial-gradient(ellipse 50% 40% at 50% 90%, rgba(124,58,237,0.04) 0%, transparent 50%);
-    }
-
-    /* Nav */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(244,241,237,0.85);
-      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-      padding: 16px 40px;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .nav-brand {
-      font-family: 'Outfit', sans-serif; font-weight: 800;
-      font-size: 15px; letter-spacing: 0.5px; color: var(--text);
-      text-decoration: none;
-    }
-    .nav-brand span { color: var(--accent); }
-    .nav-tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase;
-    }
-    .nav-links { display: flex; gap: 28px; align-items: center; }
-    .nav-links a {
-      font-size: 13px; font-weight: 500; color: var(--text-mid);
-      text-decoration: none; transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent); }
-
-    /* Container */
-    .container { max-width: 1120px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
-
-    /* Hero */
-    .hero {
-      padding: 100px 0 80px;
-      text-align: center;
-    }
-    .hero-pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      padding: 8px 20px; letter-spacing: 2px; text-transform: uppercase;
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-pill);
-      color: var(--accent); box-shadow: var(--shadow-sm);
-      margin-bottom: 28px;
-    }
-    .hero-pill::before {
-      content: ''; width: 7px; height: 7px; background: var(--accent);
-      border-radius: 50%; animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)} }
-
-    .hero h1 {
-      font-family: 'Fraunces', serif; font-weight: 700;
-      font-size: clamp(40px, 6vw, 72px);
-      line-height: 1.08; letter-spacing: -1.5px;
-      color: var(--text); margin-bottom: 20px;
-    }
-    .hero h1 em {
-      font-style: italic; color: var(--accent);
-      font-weight: 500;
-    }
-    .hero-sub {
-      font-size: 19px; color: var(--text-mid); font-weight: 300;
-      max-width: 560px; margin: 0 auto 36px; line-height: 1.65;
-    }
-    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; background: var(--accent); color: white;
-      font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600;
-      border-radius: var(--radius-sm); text-decoration: none;
-      box-shadow: 0 4px 16px rgba(45,106,79,0.25);
-      transition: all 0.2s;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(45,106,79,0.3); }
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; background: var(--surface);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(0,0,0,0.08); color: var(--text-mid);
-      font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 500;
-      border-radius: var(--radius-sm); text-decoration: none;
-      transition: all 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* Section headers */
-    .section-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      color: var(--accent); letter-spacing: 3px; text-transform: uppercase;
-      margin-bottom: 10px; display: flex; align-items: center; gap: 10px;
-    }
-    .section-label::before {
-      content: ''; width: 20px; height: 2px; background: var(--accent);
-      border-radius: 1px;
-    }
-    .section-title {
-      font-family: 'Fraunces', serif; font-weight: 700;
-      font-size: clamp(26px, 3.5vw, 40px);
-      line-height: 1.15; letter-spacing: -0.5px;
-      color: var(--text); margin-bottom: 8px;
-    }
-    .section-desc {
-      font-size: 16px; color: var(--text-mid); font-weight: 300;
-      max-width: 600px; line-height: 1.6;
-    }
-
-    /* Glass card */
-    .glass-card {
-      background: var(--glass-strong);
-      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-glass);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .glass-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    /* Pipeline section */
-    .pipeline { padding: 80px 0; }
-    .pipeline-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-      margin-top: 40px;
-    }
-    .pipe-step {
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      padding: 32px 24px;
-      text-align: center;
-      position: relative;
-      box-shadow: var(--shadow-glass);
-      transition: all 0.3s;
-    }
-    .pipe-step:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-    .pipe-num {
-      font-family: 'Fraunces', serif; font-size: 48px; font-weight: 700;
-      color: var(--accent); opacity: 0.15; line-height: 1; margin-bottom: 8px;
-    }
-    .pipe-icon {
-      font-size: 32px; margin-bottom: 12px;
-    }
-    .pipe-title {
-      font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 700;
-      color: var(--text); margin-bottom: 6px;
-    }
-    .pipe-desc {
-      font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.5;
-    }
-    .pipe-arrow {
-      position: absolute; right: -12px; top: 50%; transform: translateY(-50%);
-      font-size: 18px; color: var(--accent); opacity: 0.4; z-index: 2;
-    }
-
-    /* Tools section */
-    .tools-section { padding: 80px 0; }
-    .tools-category { margin-bottom: 60px; }
-    .cat-header { margin-bottom: 24px; }
-    .cat-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 14px; border-radius: var(--radius-pill);
-      font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
-    }
-    .cat-badge.green { background: var(--accent-bg); color: var(--accent); border: 1px solid var(--accent-border); }
-    .cat-badge.blue { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(26,115,232,0.15); }
-    .cat-badge.purple { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(124,58,237,0.15); }
-    .cat-badge.orange { background: var(--orange-bg); color: var(--orange); border: 1px solid rgba(234,88,12,0.15); }
-    .cat-badge.rose { background: var(--rose-bg); color: var(--rose); border: 1px solid rgba(225,29,72,0.12); }
-    .cat-title {
-      font-family: 'Fraunces', serif; font-weight: 700;
-      font-size: 28px; color: var(--text); letter-spacing: -0.3px;
-    }
-    .cat-sub {
-      font-size: 15px; color: var(--text-mid); font-weight: 300; margin-top: 4px;
-    }
-
-    .tools-grid-2 {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-    }
-    .tools-grid-3 {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-      margin-top: 16px;
-    }
-
-    .tool-card {
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      padding: 32px 28px;
-      box-shadow: var(--shadow-glass);
-      transition: all 0.3s;
-      text-decoration: none; display: block; color: inherit;
-      position: relative; overflow: hidden;
-    }
-    .tool-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--accent); transform: scaleX(0); transform-origin: left;
-      transition: transform 0.4s;
-    }
-    .tool-card:hover::before { transform: scaleX(1); }
-    .tool-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .tool-card.featured {
-      background: var(--text);
-      border-color: rgba(255,255,255,0.08);
-    }
-    .tool-card.featured .tool-name { color: #f0f0f0; }
-    .tool-card.featured .tool-cat { color: rgba(255,255,255,0.35); }
-    .tool-card.featured .tool-desc { color: rgba(255,255,255,0.55); }
-    .tool-card.featured .tool-verdict { color: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.08); }
-    .tool-card.featured .verdict-hl { color: var(--accent-light); }
-    .tool-card.featured::before { background: var(--accent-light); }
-    .tool-card.featured .tool-tag { background: rgba(64,145,108,0.15); color: #5cdb95; border-color: rgba(64,145,108,0.25); }
-
-    .tool-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-    .tool-logo {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: white; border: 1px solid rgba(0,0,0,0.06);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; box-shadow: var(--shadow-sm);
-    }
-    .tool-card.featured .tool-logo { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
-    .tool-tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      padding: 4px 12px; border-radius: var(--radius-pill);
-      letter-spacing: 1.5px; text-transform: uppercase;
-      background: var(--accent-bg); color: var(--accent);
-      border: 1px solid var(--accent-border);
-    }
-    .tool-tag.free { background: var(--blue-bg); color: var(--blue); border-color: rgba(26,115,232,0.15); }
-    .tool-name {
-      font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700;
-      color: var(--text); margin-bottom: 2px;
-    }
-    .tool-cat {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      color: var(--text-dim); letter-spacing: 1.5px; text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .tool-desc {
-      font-size: 14px; color: var(--text-mid); font-weight: 300;
-      line-height: 1.6; margin-bottom: 14px;
-    }
-    .tool-verdict {
-      font-family: 'JetBrains Mono', monospace; font-size: 12px;
-      color: var(--text-dim); line-height: 1.5;
-      padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.06);
-    }
-    .verdict-hl { color: var(--accent); font-weight: 700; }
-
-    /* Small tool card */
-    .tool-sm {
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      padding: 24px 20px;
-      box-shadow: var(--shadow-glass);
-      transition: all 0.3s;
-      text-decoration: none; display: block; color: inherit;
-    }
-    .tool-sm:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-    .tool-sm .tool-logo { width: 36px; height: 36px; border-radius: 10px; margin-bottom: 12px; font-size: 20px; }
-    .tool-sm .tool-name { font-size: 16px; margin-bottom: 2px; }
-    .tool-sm .tool-cat { font-size: 10px; margin-bottom: 8px; }
-    .tool-sm .tool-desc { font-size: 13px; }
-    .tool-sm .tool-price {
-      display: inline-block; margin-top: 10px;
-      font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      padding: 3px 10px; border: 1px solid rgba(0,0,0,0.06);
-      color: var(--text-dim); letter-spacing: 1px; border-radius: 6px;
-    }
-
-    /* Use cases */
-    .usecases { padding: 80px 0; }
-    .usecase-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-      margin-top: 32px;
-    }
-    .usecase-card {
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      padding: 32px 24px;
-      box-shadow: var(--shadow-glass);
-      transition: all 0.3s;
-    }
-    .usecase-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .uc-icon { font-size: 36px; margin-bottom: 14px; }
-    .uc-title {
-      font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700;
-      color: var(--text); margin-bottom: 6px;
-    }
-    .uc-desc {
-      font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.55;
-    }
-
-    /* Pro tips */
-    .tips { padding: 60px 0 80px; }
-    .tips-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-      margin-top: 32px;
-    }
-    .tip-card {
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      box-shadow: var(--shadow-glass);
-    }
-    .tip-num {
-      font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700;
-      color: var(--accent); opacity: 0.2; line-height: 1; margin-bottom: 8px;
-    }
-    .tip-title {
-      font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700;
-      color: var(--text); margin-bottom: 6px;
-    }
-    .tip-desc {
-      font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.55;
-    }
-
-    /* Quote */
-    .quote-section {
-      padding: 64px 0;
-    }
-    .quote-card {
-      background: var(--text);
-      border-radius: var(--radius);
-      padding: 56px 48px;
-      text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .quote-card::before {
-      content: ''; position: absolute;
-      width: 400px; height: 400px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(45,106,79,0.12) 0%, transparent 70%);
-      top: 50%; left: 50%; transform: translate(-50%,-50%);
-      pointer-events: none;
-    }
-    .quote-text {
-      font-family: 'Fraunces', serif; font-size: clamp(22px, 3vw, 32px);
-      font-weight: 500; color: #e8e8e8; line-height: 1.35;
-      max-width: 700px; margin: 0 auto 20px; position: relative;
-    }
-    .quote-text em { font-style: italic; color: #5cdb95; }
-    .quote-attr {
-      font-family: 'JetBrains Mono', monospace; font-size: 12px;
-      color: rgba(255,255,255,0.35); letter-spacing: 2px; text-transform: uppercase;
-      position: relative;
-    }
-
-    /* Resources */
-    .resources { padding: 60px 0; }
-    .resource-card {
-      background: var(--glass-strong);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      padding: 36px 32px;
-      box-shadow: var(--shadow-glass);
-      display: flex; align-items: center; gap: 24px;
-      margin-top: 24px;
-      text-decoration: none; color: inherit;
-      transition: all 0.3s;
-    }
-    .resource-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-    .resource-icon { font-size: 40px; flex-shrink: 0; }
-    .resource-body { flex: 1; }
-    .resource-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .resource-desc { font-size: 13px; color: var(--text-mid); font-weight: 300; }
-    .resource-link {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase;
-      margin-top: 6px; display: inline-block;
-    }
-
-    /* CTA */
-    .cta-section { padding: 40px 0 100px; }
-    .cta-card {
-      background: var(--glass-strong);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      padding: 60px 48px;
-      text-align: center;
-      box-shadow: var(--shadow-lg);
-      position: relative; overflow: hidden;
-    }
-    .cta-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--blue));
-    }
-    .cta-title {
-      font-family: 'Fraunces', serif; font-weight: 700;
-      font-size: clamp(24px, 3.5vw, 36px);
-      line-height: 1.15; color: var(--text); margin-bottom: 14px;
-    }
-    .cta-desc {
-      font-size: 16px; color: var(--text-mid); font-weight: 300;
-      max-width: 480px; margin: 0 auto 28px; line-height: 1.6;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid rgba(0,0,0,0.06);
-      padding: 28px 40px;
-      display: flex; justify-content: space-between; align-items: center;
-      position: relative; z-index: 1;
-    }
-    .footer-brand {
-      font-family: 'Outfit', sans-serif; font-weight: 800;
-      font-size: 14px; color: var(--text);
-    }
-    .footer-brand span { color: var(--accent); }
-    .footer-copy {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      color: var(--text-dim);
-    }
-
-    /* Showcase */
-    .showcase { padding: 80px 0; }
-    .showcase-demo {
-      margin-top: 40px;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-      align-items: start;
-    }
-    .demo-card {
-      background: var(--glass-strong);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-glass);
-      transition: all 0.3s;
-    }
-    .demo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .demo-media {
-      width: 100%; display: block;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-    }
-    .demo-media img { width: 100%; display: block; }
-    .demo-media video { width: 100%; display: block; }
-    .demo-info { padding: 20px 24px; }
-    .demo-step {
-      font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      color: var(--accent); letter-spacing: 2px; text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .demo-title {
-      font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700;
-      color: var(--text); margin-bottom: 6px;
-    }
-    .demo-desc {
-      font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.55;
-    }
-    .demo-tools {
-      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;
-    }
-    .demo-tool-pill {
-      font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      padding: 3px 10px; border-radius: 6px;
-      background: var(--accent-bg); color: var(--accent);
-      border: 1px solid var(--accent-border); letter-spacing: 0.5px;
-    }
-    .demo-notice {
-      margin-top: 20px;
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .demo-notice-icon { font-size: 24px; flex-shrink: 0; }
-    .demo-notice-text {
-      font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.5;
-    }
-    .demo-notice-text strong { color: var(--text); font-weight: 600; }
-
-    @media (max-width: 900px) {
-      .showcase-demo { grid-template-columns: 1fr; }
-    }
-
-    /* Divider */
-    .divider {
-      height: 1px; max-width: 1120px; margin: 0 auto;
-      background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
-    }
-
-    /* Animations */
-    .fade-up {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    /* Image showcases */
-    .showcase-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
-      margin-top: 24px;
-    }
-    .showcase-img {
-      width: 100%; aspect-ratio: 4/5; object-fit: cover;
-      border-radius: var(--radius-sm); border: 1px solid rgba(0,0,0,0.05);
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.3s;
-    }
-    .showcase-img:hover { transform: scale(1.03); }
-    .showcase-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      color: var(--text-dim); text-align: center; margin-top: 8px;
-      letter-spacing: 1px; text-transform: uppercase;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .container { padding: 0 20px; }
-      nav { padding: 14px 20px; }
-      .nav-links { display: none; }
-      .hero { padding: 60px 0 50px; }
-      .pipeline-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-      .pipe-arrow { display: none; }
-      .tools-grid-2 { grid-template-columns: 1fr; }
-      .tools-grid-3 { grid-template-columns: 1fr; }
-      .usecase-grid { grid-template-columns: 1fr; }
-      .tips-grid { grid-template-columns: 1fr; }
-      .showcase-grid { grid-template-columns: 1fr 1fr; }
-      .quote-card { padding: 40px 24px; }
-      .cta-card { padding: 40px 24px; }
-      .resource-card { flex-direction: column; text-align: center; }
-      footer { flex-direction: column; gap: 8px; text-align: center; padding: 20px; }
-    }
-    @media (max-width: 500px) {
-      .pipeline-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
-
-<div class="ambient-bg"></div>
-
-<nav>
-  <a href="https://juanuribeia.com" class="nav-brand">juan<span>uribe</span>.ia</a>
-  <span class="nav-tag">Guía Gratuita · Junio 2026</span>
-  <div class="nav-links">
-    <a href="#pipeline">Pipeline</a>
-    <a href="#ejemplo">Ejemplo</a>
-    <a href="#herramientas">Herramientas</a>
-    <a href="#usecases">Casos de uso</a>
-    <a href="#tips">Tips pro</a>
-  </div>
-</nav>
-
-<div class="container">
-
-  <!-- HERO -->
-  <section class="hero fade-up">
-    <div class="hero-pill">Recurso gratuito · Actualizado Junio 2026</div>
-    <h1>Contenido profesional<br/>para tu marca con <em>IA</em></h1>
-    <p class="hero-sub">Fotos de producto, videos, voiceovers y campañas completas — sin fotógrafo, sin estudio y sin modelo. Esta es tu guía paso a paso.</p>
-    <div class="hero-ctas">
-      <a href="#pipeline" class="btn-primary">↓ Ver la guía completa</a>
-      <a href="https://www.instagram.com/juanuribe.ia/" target="_blank" class="btn-outline">@juanuribe.ia</a>
+    <link
+      rel="preload"
+      href="/assets/fonts/archivo-latin-standard-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/guide-layout.css" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/resources.css" />
+    <script src="/assets/site.js" defer></script>
+  </head>
+  <body class="resource-page guide-page">
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="/" class="site-brand">juanuribe<span>.ia</span></a>
+      <ul class="site-nav-links">
+        <li><a href="/#portfolio">Mi trabajo</a></li>
+        <li><a href="/#services">Servicios</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/contenido-ia/" aria-current="page">Guía IA</a></li>
+      </ul>
+      <a href="/#contact" class="nav-cta"
+        >Hablemos
+        <span aria-hidden="true"
+          ><img
+            class="external-arrow"
+            src="/assets/arrow-up-right.svg"
+            width="18"
+            height="18"
+            alt=""
+            aria-hidden="true" /></span
+      ></a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        Menú
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="/#portfolio">Mi trabajo</a><a href="/#services">Servicios</a
+      ><a href="/herramientas/">Herramientas</a
+      ><a href="/contenido-ia/">Guía IA</a><a href="/#guides">Recursos gratis</a
+      ><a href="/#contact">Hablemos</a>
     </div>
-  </section>
 
-  <div class="divider"></div>
-
-  <!-- PIPELINE -->
-  <section class="pipeline fade-up" id="pipeline">
-    <div class="section-label">El proceso</div>
-    <div class="section-title">De cero a contenido publicado en 4 pasos</div>
-    <div class="section-desc">Este es el pipeline completo que reemplaza un equipo de producción tradicional.</div>
-
-    <div class="pipeline-grid">
-      <div class="pipe-step">
-        <div class="pipe-num">01</div>
-        <div class="pipe-icon">📸</div>
-        <div class="pipe-title">Genera la imagen</div>
-        <div class="pipe-desc">Escribe un prompt detallado y genera fotos nivel campaña real — productos, lifestyle, UGC.</div>
-        <span class="pipe-arrow">→</span>
-      </div>
-      <div class="pipe-step">
-        <div class="pipe-num">02</div>
-        <div class="pipe-icon">🎬</div>
-        <div class="pipe-title">Convierte a video</div>
-        <div class="pipe-desc">Toma esa imagen y anímala con movimiento cinematográfico, audio nativo y control de cámara.</div>
-        <span class="pipe-arrow">→</span>
-      </div>
-      <div class="pipe-step">
-        <div class="pipe-num">03</div>
-        <div class="pipe-icon">🎙️</div>
-        <div class="pipe-title">Agrega voz</div>
-        <div class="pipe-desc">Clona tu propia voz o elige una predefinida. Narra tu contenido sin grabar audio manual.</div>
-        <span class="pipe-arrow">→</span>
-      </div>
-      <div class="pipe-step">
-        <div class="pipe-num">04</div>
-        <div class="pipe-icon">🚀</div>
-        <div class="pipe-title">Publica</div>
-        <div class="pipe-desc">Edita, agrega subtítulos automáticos y publica en todas tus plataformas desde un solo lugar.</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- SHOWCASE -->
-  <section class="showcase fade-up" id="ejemplo">
-    <div class="section-label">Ejemplo real</div>
-    <div class="section-title">De un prompt a contenido de marca</div>
-    <div class="section-desc">Esto es Florencia — un avatar creado 100% con IA. Foto, video de producto y UGC — todo generado sin cámara, sin modelo, sin estudio.</div>
-
-    <div class="showcase-demo">
-      <div class="demo-card">
-        <div class="demo-media">
-          <img src="assets/florencia-foto.jpg" alt="Avatar IA — Florencia — foto generada con prompt" loading="lazy" />
-        </div>
-        <div class="demo-info">
-          <div class="demo-step">Paso 1 — Imagen</div>
-          <div class="demo-title">Foto generada con un prompt</div>
-          <div class="demo-desc">Un prompt detallado con iluminación, ángulo, texturas, outfit y mood genera una foto que parece sesión profesional real.</div>
-          <div class="demo-tools">
-            <span class="demo-tool-pill">Nano Banana Pro</span>
-            <span class="demo-tool-pill">Prompt detallado</span>
+    <noscript
+      ><nav class="nojs-links" aria-label="Enlaces del sitio">
+        <a href="/">Inicio</a><a href="/herramientas/">Herramientas</a
+        ><a href="/contenido-ia/">Guía IA</a>
+      </nav></noscript
+    >
+    <main id="main-content" tabindex="-1">
+      <div class="container">
+        <!-- HERO -->
+        <section class="hero fade-up">
+          <div class="hero-pill">Recurso gratuito · Actualizado Junio 2026</div>
+          <h1>Contenido profesional<br />para tu marca con <em>IA</em></h1>
+          <p class="hero-sub">
+            Fotos de producto, videos, voiceovers y campañas completas, sin
+            fotógrafo, sin estudio y sin modelo. Esta es tu guía paso a paso.
+          </p>
+          <div class="hero-ctas">
+            <a href="#pipeline" class="btn-primary">↓ Ver la guía completa</a>
+            <a
+              href="https://www.instagram.com/juanuribe.ia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline"
+              >@juanuribe.ia</a
+            >
           </div>
-        </div>
-      </div>
-      <div class="demo-card">
-        <div class="demo-media">
-          <video src="assets/florencia-video.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="demo-info">
-          <div class="demo-step">Paso 2 — Video producto</div>
-          <div class="demo-title">Animación de la imagen</div>
-          <div class="demo-desc">La foto se convierte en video con movimiento natural, expresión facial y contexto de producto. Parece contenido real grabado.</div>
-          <div class="demo-tools">
-            <span class="demo-tool-pill">Kling 3.0</span>
-            <span class="demo-tool-pill">Image to Video</span>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- PIPELINE -->
+        <section class="pipeline fade-up" id="pipeline">
+          <h2 class="section-title">
+            De cero a contenido publicado en 4 pasos
+          </h2>
+          <div class="section-desc">
+            Este es el pipeline completo que reemplaza un equipo de producción
+            tradicional.
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="demo-card" style="margin-top:16px;">
-      <div class="demo-media">
-        <video src="assets/florencia-ugc.mp4" autoplay loop muted playsinline style="aspect-ratio:16/9;object-fit:cover;"></video>
-      </div>
-      <div class="demo-info" style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
-        <div style="flex:1;min-width:240px;">
-          <div class="demo-step">Paso 3 — UGC para marca</div>
-          <div class="demo-title">Video estilo UGC promocionando producto</div>
-          <div class="demo-desc">El mismo avatar genera contenido estilo influencer: hablando a cámara, mostrando producto, en un entorno real. Listo para publicar como ad o contenido orgánico.</div>
-        </div>
-        <div class="demo-tools" style="gap:6px;">
-          <span class="demo-tool-pill">HeyGen</span>
-          <span class="demo-tool-pill">ElevenLabs</span>
-          <span class="demo-tool-pill">UGC Ad</span>
-        </div>
-      </div>
-    </div>
+          <div class="pipeline-grid">
+            <div class="pipe-step">
+              <div class="pipe-num">01</div>
 
-    <div class="demo-notice">
-      <div class="demo-notice-icon">🤯</div>
-      <div class="demo-notice-text"><strong>Esta persona no existe.</strong> Florencia es un personaje 100% generado con IA — la foto, el video, la voz, todo. Un solo avatar produce contenido infinito para cualquier marca.</div>
-    </div>
-  </section>
+              <div class="pipe-title">Genera la imagen</div>
+              <div class="pipe-desc">
+                Escribe un prompt detallado y genera fotos nivel campaña real -
+                productos, lifestyle, UGC.
+              </div>
+              <span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-step">
+              <div class="pipe-num">02</div>
 
-  <div class="divider"></div>
+              <div class="pipe-title">Convierte a video</div>
+              <div class="pipe-desc">
+                Toma esa imagen y anímala con movimiento cinematográfico, audio
+                nativo y control de cámara.
+              </div>
+              <span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-step">
+              <div class="pipe-num">03</div>
 
-  <!-- HERRAMIENTAS -->
-  <section class="tools-section fade-up" id="herramientas">
-    <div class="section-label">El stack completo</div>
-    <div class="section-title">Las herramientas que necesitas</div>
-    <div class="section-desc">Cada herramienta cumple un rol específico en el pipeline. Aquí están las mejores de 2026.</div>
+              <div class="pipe-title">Agrega voz</div>
+              <div class="pipe-desc">
+                Clona tu propia voz o elige una predefinida. Narra tu contenido
+                sin grabar audio manual.
+              </div>
+              <span class="pipe-arrow">→</span>
+            </div>
+            <div class="pipe-step">
+              <div class="pipe-num">04</div>
 
-    <!-- IMAGEN -->
-    <div class="tools-category" style="margin-top: 48px;">
-      <div class="cat-header">
-        <div class="cat-badge green">01 — Imagen</div>
-        <div class="cat-title">Generación de Imágenes</div>
-        <div class="cat-sub">Fotos de producto, lifestyle, UGC y contenido visual desde un prompt.</div>
-      </div>
-      <div class="tools-grid-2">
-        <a href="https://nanobanana.ai" target="_blank" class="tool-card featured">
-          <div class="tool-top">
-            <div class="tool-logo">🍌</div>
-            <span class="tool-tag">Top pick</span>
+              <div class="pipe-title">Publica</div>
+              <div class="pipe-desc">
+                Edita, agrega subtítulos automáticos y publica en todas tus
+                plataformas desde un solo lugar.
+              </div>
+            </div>
           </div>
-          <div class="tool-name">Nano Banana 2 / Pro</div>
-          <div class="tool-cat">Google · Gemini · Imagen</div>
-          <div class="tool-desc">El modelo de Google integrado en AI Studio. Nano Banana Pro para producción rápida con interfaz limpia, y Nano Banana 2 como la versión más nueva con mayor fotorrealismo. Ideal para fotos de producto, lifestyle y personajes consistentes.</div>
-          <div class="tool-verdict"><span class="verdict-hl">→ Cuándo usarlo:</span> Para producción en lote de contenido de marca. Calidad profesional, velocidad alta, costo accesible.</div>
-        </a>
-        <a href="https://chat.openai.com" target="_blank" class="tool-card">
-          <div class="tool-top">
-            <div class="tool-logo">✨</div>
-            <span class="tool-tag">popular</span>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- SHOWCASE -->
+        <section class="showcase fade-up" id="ejemplo">
+          <h2 class="section-title">De un prompt a contenido de marca</h2>
+          <div class="section-desc">
+            Esto es Florencia, un avatar creado 100% con IA. Foto, video de
+            producto y UGC, todo generado sin cámara, sin modelo, sin estudio.
           </div>
-          <div class="tool-name">ChatGPT Image 2.0</div>
-          <div class="tool-cat">OpenAI · GPT Image · Todo en uno</div>
-          <div class="tool-desc">La generación de imágenes de OpenAI dio un salto enorme. Ahora produce fotos ultra realistas, mockups, layouts, e incluso texto legible dentro de las imágenes. Todo desde el chat que ya conoces.</div>
-          <div class="tool-verdict"><span class="verdict-hl">→ Cuándo usarlo:</span> Cuando necesitas versatilidad total — desde una foto de producto hasta un flyer con texto. Un solo prompt, un resultado listo.</div>
-        </a>
-      </div>
-    </div>
 
-    <!-- PROMPTS -->
-    <div class="tools-category">
-      <div class="cat-header">
-        <div class="cat-badge blue">02 — Prompts</div>
-        <div class="cat-title">Librería de Prompts</div>
-        <div class="cat-sub">No tienes que inventar desde cero. Usa prompts curados y probados.</div>
-      </div>
-      <div class="tools-grid-2">
-        <a href="https://youmind.com/prompts" target="_blank" class="tool-card featured">
-          <div class="tool-top">
-            <div class="tool-logo">🧠</div>
-            <span class="tool-tag">recurso clave</span>
+          <div class="showcase-demo">
+            <div class="demo-card">
+              <div class="demo-media">
+                <img
+                  src="/assets/florencia.webp"
+                  alt="Avatar IA. Florencia. foto generada con prompt"
+                  loading="lazy"
+                />
+              </div>
+              <div class="demo-info">
+                <div class="demo-step">Paso 1. Imagen</div>
+                <div class="demo-title">Foto generada con un prompt</div>
+                <div class="demo-desc">
+                  Un prompt detallado con iluminación, ángulo, texturas, outfit
+                  y mood genera una foto que parece sesión profesional real.
+                </div>
+                <div class="demo-tools">
+                  <span class="demo-tool-pill">Nano Banana Pro</span>
+                  <span class="demo-tool-pill">Prompt detallado</span>
+                </div>
+              </div>
+            </div>
+            <div class="demo-card">
+              <div class="demo-media">
+                <video
+                  aria-label="Ejemplo de video generado con IA"
+                  poster="/assets/florencia.webp"
+                  src="assets/florencia-video.mp4"
+                  controls
+                  muted
+                  playsinline
+                  preload="none"
+                ></video>
+              </div>
+              <div class="demo-info">
+                <div class="demo-step">Paso 2. Video producto</div>
+                <div class="demo-title">Animación de la imagen</div>
+                <div class="demo-desc">
+                  La foto se convierte en video con movimiento natural,
+                  expresión facial y contexto de producto. Parece contenido real
+                  grabado.
+                </div>
+                <div class="demo-tools">
+                  <span class="demo-tool-pill">Kling 3.0</span>
+                  <span class="demo-tool-pill">Image to Video</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="tool-name">YouMind</div>
-          <div class="tool-cat">Prompt Library · +20,000 Prompts</div>
-          <div class="tool-desc">La librería de prompts de IA más grande del mundo. Más de 20,000 prompts curados para imagen y video — filtrados por modelo (Nano Banana, GPT Image, Seedance), categoría y engagement. Anime, cómic, realismo, posts, flyers, producto... todo.</div>
-          <div class="tool-verdict"><span class="verdict-hl">→ Cuándo usarlo:</span> Antes de generar cualquier imagen. Busca el estilo que necesitas, copia el prompt y adáptalo. Ahorra horas de prueba y error.</div>
-        </a>
-        <div class="tool-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;">
-          <div style="font-size:48px;margin-bottom:16px;">💡</div>
-          <div class="tool-name" style="font-size:18px;">¿Por qué importan los prompts?</div>
-          <div class="tool-desc" style="max-width:320px;margin:8px auto 0;">La diferencia entre una imagen genérica y una que parece campaña real está en el prompt. Un buen prompt incluye: iluminación, ángulo de cámara, texturas, expresión, color grading, y mood. YouMind te da todo eso pre-construido.</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- AVATARES & VIDEO -->
-    <div class="tools-category">
-      <div class="cat-header">
-        <div class="cat-badge purple">03 — Avatares & Video</div>
-        <div class="cat-title">Video, Avatares y Animación</div>
-        <div class="cat-sub">De imagen estática a video cinematográfico. Avatares que hablan por tu marca.</div>
-      </div>
-      <div class="tools-grid-2">
-        <a href="https://heygen.com" target="_blank" class="tool-card featured">
-          <div class="tool-top">
-            <div class="tool-logo">🧑‍💼</div>
-            <span class="tool-tag">avatares #1</span>
+          <div class="demo-card" style="margin-top: 16px">
+            <div class="demo-media">
+              <video
+                aria-label="Ejemplo de video generado con IA"
+                poster="/assets/ugc-preview.webp"
+                src="assets/florencia-ugc.mp4"
+                controls
+                muted
+                playsinline
+                preload="none"
+                style="aspect-ratio: 16/9; object-fit: cover"
+              ></video>
+            </div>
+            <div
+              class="demo-info"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                flex-wrap: wrap;
+              "
+            >
+              <div style="flex: 1; min-width: 240px">
+                <div class="demo-step">Paso 3. UGC para marca</div>
+                <div class="demo-title">
+                  Video estilo UGC promocionando producto
+                </div>
+                <div class="demo-desc">
+                  El mismo avatar genera contenido estilo influencer: hablando a
+                  cámara, mostrando producto, en un entorno real. Listo para
+                  publicar como ad o contenido orgánico.
+                </div>
+              </div>
+              <div class="demo-tools" style="gap: 6px">
+                <span class="demo-tool-pill">HeyGen</span>
+                <span class="demo-tool-pill">ElevenLabs</span>
+                <span class="demo-tool-pill">UGC Ad</span>
+              </div>
+            </div>
           </div>
-          <div class="tool-name">HeyGen</div>
-          <div class="tool-cat">Avatares · Lip Sync · 175+ Idiomas</div>
-          <div class="tool-desc">El líder en avatares realistas con IA. Crea un vocero digital para tu marca: sube tu cara o elige de su librería, dale un guión y genera video con lip sync perfecto en cualquier idioma. Avatar IV Technology parece video real filmado.</div>
-          <div class="tool-verdict"><span class="verdict-hl">→ Cuándo usarlo:</span> Para crear un presentador de marca que nunca necesita grabar. Video marketing a escala, testimonios, demos, soporte.</div>
-        </a>
-        <a href="https://arcads.ai" target="_blank" class="tool-card">
-          <div class="tool-top">
-            <div class="tool-logo">🎯</div>
-            <span class="tool-tag">ugc ads</span>
+
+          <div class="demo-notice">
+            <div class="demo-notice-text">
+              <strong>Esta persona no existe.</strong> Florencia es un personaje
+              100% generado con IA. la foto, el video, la voz, todo. Un solo
+              avatar produce contenido infinito para cualquier marca.
+            </div>
           </div>
-          <div class="tool-name">Arcads</div>
-          <div class="tool-cat">UGC Ads · AI Actors · Performance</div>
-          <div class="tool-desc">Especializado en ads estilo UGC. Más de 1,000 actores IA, lip sync en 30+ idiomas, crea variaciones de anuncios en minutos. Escribes el guión, eliges la cara y tienes un ad de TikTok o Instagram listo para correr.</div>
-          <div class="tool-verdict"><span class="verdict-hl">→ Cuándo usarlo:</span> Para crear ads de performance a escala. Si corres campañas pagadas y necesitas 20 variaciones de creative en un día.</div>
-        </a>
-      </div>
-      <div class="tools-grid-3">
-        <a href="https://kling.ai" target="_blank" class="tool-sm">
-          <div class="tool-logo">🎬</div>
-          <div class="tool-name">Kling 3.0</div>
-          <div class="tool-cat">Video · Realismo Cinemático</div>
-          <div class="tool-desc">El mejor para movimiento realista de personas. 4K/60fps. Ideal para animar fotos de personaje y crear transiciones cinematográficas entre escenas.</div>
-          <div class="tool-price">Desde $10/mes</div>
-        </a>
-        <a href="https://seedance.tv" target="_blank" class="tool-sm">
-          <div class="tool-logo">🌱</div>
-          <div class="tool-name">Seedance 2.0</div>
-          <div class="tool-cat">ByteDance · Multimodal</div>
-          <div class="tool-desc">Video con audio nativo integrado. Input multimodal (texto, imagen, audio, video). 15 segundos por clip con consistencia de referencia visual entre tomas.</div>
-          <div class="tool-price">Free tier disponible</div>
-        </a>
-        <a href="https://github.com/Wan-Video/Wan2.7" target="_blank" class="tool-sm">
-          <div class="tool-logo">🌊</div>
-          <div class="tool-name">Wan 2.7</div>
-          <div class="tool-cat">Alibaba · Open Source</div>
-          <div class="tool-desc">El modelo open source más completo. Thinking Mode planifica la escena antes de generar. First/last frame control, 9-grid input, voice reference. Sin restricciones de contenido.</div>
-          <div class="tool-price">Open source · Gratis</div>
-        </a>
-      </div>
-    </div>
+        </section>
 
-    <!-- VOZ -->
-    <div class="tools-category">
-      <div class="cat-header">
-        <div class="cat-badge orange">04 — Voz</div>
-        <div class="cat-title">Voz y Clonación de Audio</div>
-        <div class="cat-sub">La voz de tu marca — clonada o creada — sin grabar un solo audio.</div>
-      </div>
-      <div class="tools-grid-2">
-        <a href="https://elevenlabs.io" target="_blank" class="tool-card featured">
-          <div class="tool-top">
-            <div class="tool-logo">🎙️</div>
-            <span class="tool-tag">mejor calidad</span>
+        <div class="divider"></div>
+
+        <!-- HERRAMIENTAS -->
+        <section class="tools-section fade-up" id="herramientas">
+          <h2 class="section-title">Las herramientas que necesitas</h2>
+          <div class="section-desc">
+            Cada herramienta cumple un rol específico en el pipeline. Aquí están
+            las mejores de 2026.
           </div>
-          <div class="tool-name">ElevenLabs</div>
-          <div class="tool-cat">TTS · Clonación · Mejor en español</div>
-          <div class="tool-desc">La mejor calidad de voz del mercado, punto. Clona tu voz en segundos con resultado casi idéntico. El TTS en español suena completamente natural — ni se nota que es IA. 10,000 caracteres gratis al mes con voces predefinidas. Clonar voz requiere plan pago.</div>
-          <div class="tool-verdict"><span class="verdict-hl">→ Free tier:</span> 10K caracteres/mes con voces predefinidas. Suficiente para empezar. Clonación desde $5/mes.</div>
-        </a>
-        <a href="https://minimax.io/audio" target="_blank" class="tool-card">
-          <div class="tool-top">
-            <div class="tool-logo">🔊</div>
-            <span class="tool-tag free">clonación gratis</span>
+
+          <!-- IMAGEN -->
+          <div class="tools-category" style="margin-top: 48px">
+            <div class="cat-header">
+              <div class="cat-badge green">01. Imagen</div>
+              <h2 class="cat-title">Generación de Imágenes</h2>
+              <div class="cat-sub">
+                Fotos de producto, lifestyle, UGC y contenido visual desde un
+                prompt.
+              </div>
+            </div>
+            <div class="tools-grid-2">
+              <a
+                href="https://nanobanana.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-card featured"
+              >
+                <div class="tool-top">
+                  <div class="tool-logo tool-monogram" aria-hidden="true">
+                    NA
+                  </div>
+                  <span class="tool-tag">Top pick</span>
+                </div>
+                <div class="tool-name">Nano Banana 2 / Pro</div>
+                <div class="tool-cat">Google · Gemini · Imagen</div>
+                <div class="tool-desc">
+                  El modelo de Google integrado en AI Studio. Nano Banana Pro
+                  para producción rápida con interfaz limpia, y Nano Banana 2
+                  como la versión más nueva con mayor fotorrealismo. Ideal para
+                  fotos de producto, lifestyle y personajes consistentes.
+                </div>
+                <div class="tool-verdict">
+                  <span class="verdict-hl">→ Cuándo usarlo:</span> Para
+                  producción en lote de contenido de marca. Calidad profesional,
+                  velocidad alta, costo accesible.
+                </div>
+              </a>
+              <a
+                href="https://chat.openai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-card"
+              >
+                <div class="tool-top">
+                  <div class="tool-logo tool-monogram" aria-hidden="true">
+                    CH
+                  </div>
+                  <span class="tool-tag">popular</span>
+                </div>
+                <div class="tool-name">ChatGPT Image 2.0</div>
+                <div class="tool-cat">OpenAI · GPT Image · Todo en uno</div>
+                <div class="tool-desc">
+                  La generación de imágenes de OpenAI dio un salto enorme. Ahora
+                  produce fotos ultra realistas, mockups, layouts, e incluso
+                  texto legible dentro de las imágenes. Todo desde el chat que
+                  ya conoces.
+                </div>
+                <div class="tool-verdict">
+                  <span class="verdict-hl">→ Cuándo usarlo:</span> Cuando
+                  necesitas versatilidad total. desde una foto de producto hasta
+                  un flyer con texto. Un solo prompt, un resultado listo.
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="tool-name">MiniMax Audio</div>
-          <div class="tool-cat">Voice Clone · 300+ Voces · 50+ Idiomas</div>
-          <div class="tool-desc">La alternativa gratuita para clonación de voz. Solo necesitas 10 segundos de audio y genera una voz clonada sorprendentemente buena. 300+ voces predefinidas con control de emoción. Puede quedarse corto para volumen alto, pero para empezar es perfecto.</div>
-          <div class="tool-verdict"><span class="verdict-hl">→ Free tier:</span> Clonación incluida gratis. Ideal si no quieres invertir todavía pero necesitas tu voz en el contenido.</div>
-        </a>
+
+          <!-- PROMPTS -->
+          <div class="tools-category">
+            <div class="cat-header">
+              <div class="cat-badge blue">02. Prompts</div>
+              <h2 class="cat-title">Librería de Prompts</h2>
+              <div class="cat-sub">
+                No tienes que inventar desde cero. Usa prompts curados y
+                probados.
+              </div>
+            </div>
+            <div class="tools-grid-2">
+              <a
+                href="https://youmind.com/prompts"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-card featured"
+              >
+                <div class="tool-top">
+                  <div class="tool-logo tool-monogram" aria-hidden="true">
+                    YO
+                  </div>
+                  <span class="tool-tag">recurso clave</span>
+                </div>
+                <div class="tool-name">YouMind</div>
+                <div class="tool-cat">Prompt Library · +20,000 Prompts</div>
+                <div class="tool-desc">
+                  La librería de prompts de IA más grande del mundo. Más de
+                  20,000 prompts curados para imagen y video. filtrados por
+                  modelo (Nano Banana, GPT Image, Seedance), categoría y
+                  engagement. Anime, cómic, realismo, posts, flyers, producto...
+                  todo.
+                </div>
+                <div class="tool-verdict">
+                  <span class="verdict-hl">→ Cuándo usarlo:</span> Antes de
+                  generar cualquier imagen. Busca el estilo que necesitas, copia
+                  el prompt y adáptalo. Ahorra horas de prueba y error.
+                </div>
+              </a>
+              <aside class="prompt-note">
+                <div class="tool-name" style="font-size: 18px">
+                  ¿Por qué importan los prompts?
+                </div>
+                <div class="tool-desc">
+                  La diferencia entre una imagen genérica y una que parece
+                  campaña real está en el prompt. Un buen prompt incluye:
+                  iluminación, ángulo de cámara, texturas, expresión, color
+                  grading, y mood. YouMind te da todo eso pre-construido.
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <!-- AVATARES & VIDEO -->
+          <div class="tools-category">
+            <div class="cat-header">
+              <div class="cat-badge purple">03. Avatares & Video</div>
+              <h2 class="cat-title">Video, Avatares y Animación</h2>
+              <div class="cat-sub">
+                De imagen estática a video cinematográfico. Avatares que hablan
+                por tu marca.
+              </div>
+            </div>
+            <div class="tools-grid-2">
+              <a
+                href="https://heygen.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-card featured"
+              >
+                <div class="tool-top">
+                  <div class="tool-logo tool-monogram" aria-hidden="true">
+                    HE
+                  </div>
+                  <span class="tool-tag">avatares #1</span>
+                </div>
+                <div class="tool-name">HeyGen</div>
+                <div class="tool-cat">Avatares · Lip Sync · 175+ Idiomas</div>
+                <div class="tool-desc">
+                  El líder en avatares realistas con IA. Crea un vocero digital
+                  para tu marca: sube tu cara o elige de su librería, dale un
+                  guión y genera video con lip sync perfecto en cualquier
+                  idioma. Avatar IV Technology parece video real filmado.
+                </div>
+                <div class="tool-verdict">
+                  <span class="verdict-hl">→ Cuándo usarlo:</span> Para crear un
+                  presentador de marca que nunca necesita grabar. Video
+                  marketing a escala, testimonios, demos, soporte.
+                </div>
+              </a>
+              <a
+                href="https://arcads.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-card"
+              >
+                <div class="tool-top">
+                  <div class="tool-logo tool-monogram" aria-hidden="true">
+                    AR
+                  </div>
+                  <span class="tool-tag">ugc ads</span>
+                </div>
+                <div class="tool-name">Arcads</div>
+                <div class="tool-cat">UGC Ads · AI Actors · Performance</div>
+                <div class="tool-desc">
+                  Especializado en ads estilo UGC. Más de 1,000 actores IA, lip
+                  sync en 30+ idiomas, crea variaciones de anuncios en minutos.
+                  Escribes el guión, eliges la cara y tienes un ad de TikTok o
+                  Instagram listo para correr.
+                </div>
+                <div class="tool-verdict">
+                  <span class="verdict-hl">→ Cuándo usarlo:</span> Para crear
+                  ads de performance a escala. Si corres campañas pagadas y
+                  necesitas 20 variaciones de creative en un día.
+                </div>
+              </a>
+            </div>
+            <div class="tools-grid-3">
+              <a
+                href="https://kling.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-sm"
+              >
+                <div class="tool-logo tool-monogram" aria-hidden="true">KL</div>
+                <div class="tool-name">Kling 3.0</div>
+                <div class="tool-cat">Video · Realismo Cinemático</div>
+                <div class="tool-desc">
+                  El mejor para movimiento realista de personas. 4K/60fps. Ideal
+                  para animar fotos de personaje y crear transiciones
+                  cinematográficas entre escenas.
+                </div>
+                <div class="tool-price">Desde $10/mes</div>
+              </a>
+              <a
+                href="https://seedance.tv"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-sm"
+              >
+                <div class="tool-logo tool-monogram" aria-hidden="true">SE</div>
+                <div class="tool-name">Seedance 2.0</div>
+                <div class="tool-cat">ByteDance · Multimodal</div>
+                <div class="tool-desc">
+                  Video con audio nativo integrado. Input multimodal (texto,
+                  imagen, audio, video). 15 segundos por clip con consistencia
+                  de referencia visual entre tomas.
+                </div>
+                <div class="tool-price">Free tier disponible</div>
+              </a>
+              <a
+                href="https://github.com/Wan-Video/Wan2.7"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-sm"
+              >
+                <div class="tool-logo tool-monogram" aria-hidden="true">WA</div>
+                <div class="tool-name">Wan 2.7</div>
+                <div class="tool-cat">Alibaba · Open Source</div>
+                <div class="tool-desc">
+                  El modelo open source más completo. Thinking Mode planifica la
+                  escena antes de generar. First/last frame control, 9-grid
+                  input, voice reference. Sin restricciones de contenido.
+                </div>
+                <div class="tool-price">Open source · Gratis</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- VOZ -->
+          <div class="tools-category">
+            <div class="cat-header">
+              <div class="cat-badge orange">04. Voz</div>
+              <h2 class="cat-title">Voz y Clonación de Audio</h2>
+              <div class="cat-sub">
+                La voz de tu marca. clonada o creada. sin grabar un solo audio.
+              </div>
+            </div>
+            <div class="tools-grid-2">
+              <a
+                href="https://elevenlabs.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-card featured"
+              >
+                <div class="tool-top">
+                  <div class="tool-logo tool-monogram" aria-hidden="true">
+                    EL
+                  </div>
+                  <span class="tool-tag">mejor calidad</span>
+                </div>
+                <div class="tool-name">ElevenLabs</div>
+                <div class="tool-cat">TTS · Clonación · Mejor en español</div>
+                <div class="tool-desc">
+                  La mejor calidad de voz del mercado, punto. Clona tu voz en
+                  segundos con resultado casi idéntico. El TTS en español suena
+                  completamente natural. ni se nota que es IA. 10,000 caracteres
+                  gratis al mes con voces predefinidas. Clonar voz requiere plan
+                  pago.
+                </div>
+                <div class="tool-verdict">
+                  <span class="verdict-hl">→ Free tier:</span> 10K
+                  caracteres/mes con voces predefinidas. Suficiente para
+                  empezar. Clonación desde $5/mes.
+                </div>
+              </a>
+              <a
+                href="https://minimax.io/audio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tool-card"
+              >
+                <div class="tool-top">
+                  <div class="tool-logo tool-monogram" aria-hidden="true">
+                    MI
+                  </div>
+                  <span class="tool-tag free">clonación gratis</span>
+                </div>
+                <div class="tool-name">MiniMax Audio</div>
+                <div class="tool-cat">
+                  Voice Clone · 300+ Voces · 50+ Idiomas
+                </div>
+                <div class="tool-desc">
+                  La alternativa gratuita para clonación de voz. Solo necesitas
+                  10 segundos de audio y genera una voz clonada
+                  sorprendentemente buena. 300+ voces predefinidas con control
+                  de emoción. Puede quedarse corto para volumen alto, pero para
+                  empezar es perfecto.
+                </div>
+                <div class="tool-verdict">
+                  <span class="verdict-hl">→ Free tier:</span> Clonación
+                  incluida gratis. Ideal si no quieres invertir todavía pero
+                  necesitas tu voz en el contenido.
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- USE CASES -->
+        <section class="usecases fade-up" id="usecases">
+          <h2 class="section-title">¿Qué puedes crear con esto?</h2>
+          <div class="section-desc">
+            Todo lo que antes necesitaba un equipo completo, ahora lo haces tú.
+          </div>
+
+          <div class="usecase-grid">
+            <div class="usecase-card">
+              <div class="uc-title">Fotos de producto</div>
+              <div class="uc-desc">
+                Genera fotos nivel catálogo de cualquier producto. sobre fondo
+                blanco, en contexto de uso, lifestyle editorial. Sin estudio,
+                sin fotógrafo.
+              </div>
+            </div>
+            <div class="usecase-card">
+              <div class="uc-title">Contenido de marca con cara</div>
+              <div class="uc-desc">
+                Un avatar o personaje IA que representa tu marca. Habla a
+                cámara, presenta productos, responde preguntas. Contenido
+                constante sin depender de nadie.
+              </div>
+            </div>
+            <div class="usecase-card">
+              <div class="uc-title">Video ads sin producción</div>
+              <div class="uc-desc">
+                Ads estilo UGC para TikTok, Instagram y YouTube. 20 variaciones
+                en una tarde. Testea hooks, scripts y creativos a velocidad
+                imposible con métodos tradicionales.
+              </div>
+            </div>
+            <div class="usecase-card">
+              <div class="uc-title">Posts y carruseles</div>
+              <div class="uc-desc">
+                Imágenes editoriales para redes, carruseles educativos,
+                infografías visuales. Mantén una estética profesional constante
+                sin diseñador gráfico.
+              </div>
+            </div>
+            <div class="usecase-card">
+              <div class="uc-title">Voiceovers y narración</div>
+              <div class="uc-desc">
+                Narra tus videos con tu propia voz clonada o una voz
+                profesional. Reels, tutoriales, podcasts, demos. En cualquier
+                idioma, sin micrófono.
+              </div>
+            </div>
+            <div class="usecase-card">
+              <div class="uc-title">Contenido multiidioma</div>
+              <div class="uc-desc">
+                Traduce y genera contenido para cualquier mercado. Tu avatar
+                habla inglés, español, portugués. con lip sync real en cada
+                idioma.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- QUOTE -->
+        <section class="quote-section fade-up">
+          <div class="quote-card">
+            <div class="quote-text">
+              "La ventaja no es saber que estas herramientas existen. La ventaja
+              es <em>saber usarlas juntas.</em>"
+            </div>
+            <div class="quote-attr">- Juan Uribe · @juanuribe.ia</div>
+          </div>
+        </section>
+
+        <!-- TIPS PRO -->
+        <section class="tips fade-up" id="tips">
+          <h2 class="section-title">Lo que nadie te dice</h2>
+          <div class="section-desc">
+            Detalles que marcan la diferencia entre un resultado amateur y uno
+            profesional.
+          </div>
+
+          <div class="tips-grid">
+            <div class="tip-card">
+              <div class="tip-num">01</div>
+              <div class="tip-title">El prompt es el 80% del resultado</div>
+              <div class="tip-desc">
+                No basta con "foto de un producto". Necesitas especificar
+                iluminación (golden hour, studio softbox), ángulo de cámara (low
+                angle, eye level), texturas de materiales, expresión del modelo,
+                y color grading. YouMind te da esos prompts listos.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-num">02</div>
+              <div class="tip-title">
+                Genera la imagen primero, el video después
+              </div>
+              <div class="tip-desc">
+                El pipeline correcto es: imagen estática perfecta → animación
+                con Kling/Seedance. Nunca generes video directo de texto. el
+                control sobre composición es mínimo. Imagen primero, siempre.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-num">03</div>
+              <div class="tip-title">
+                Lip sync: genera video mudo + voz aparte
+              </div>
+              <div class="tip-desc">
+                Para resultados profesionales: genera el video sin audio, luego
+                agrega el voiceover de ElevenLabs en CapCut. Combinar ambos por
+                separado te da control total y evita problemas de
+                sincronización.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-num">04</div>
+              <div class="tip-title">Consistencia mata variedad</div>
+              <div class="tip-desc">
+                Una marca fuerte usa el mismo estilo visual, la misma paleta, la
+                misma voz. Crea un prompt base y reutilízalo con variaciones.
+                Pomelli de Google puede analizar tu web y mantener esa
+                consistencia automáticamente.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-num">05</div>
+              <div class="tip-title">Empieza gratis, escala pagando</div>
+              <div class="tip-desc">
+                MiniMax para voz, Nano Banana Pro para imágenes, Wan 2.7 para
+                video, YouMind para prompts. todo tiene tier gratuito. Valida tu
+                proceso antes de invertir. Cuando el ROI sea claro, pasa a
+                ElevenLabs + Kling + HeyGen.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-num">06</div>
+              <div class="tip-title">
+                El contenido que funciona no "parece IA"
+              </div>
+              <div class="tip-desc">
+                El objetivo no es que la gente diga "wow, eso es IA." El
+                objetivo es que el contenido se vea tan real que nadie pregunte
+                cómo se hizo. Los detalles en el prompt. grano de película,
+                imperfecciones en la piel, ropa con arrugas. hacen esa
+                diferencia.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- RESOURCE: YouMind -->
+        <section class="resources fade-up">
+          <h2 class="section-title">
+            Tu nueva herramienta favorita para prompts
+          </h2>
+
+          <a
+            href="https://youmind.com/prompts"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-body">
+              <div class="resource-title">
+                YouMind. La librería de prompts más grande del mundo
+              </div>
+              <div class="resource-desc">
+                Más de 20,000 prompts curados para Nano Banana Pro, GPT Image 2,
+                Seedance 2.0, Midjourney y más. Filtros por modelo, categoría y
+                engagement. Anime, cómic, realismo, producto, avatares, flyers -
+                todo lo que puedas imaginar, ya tiene un prompt listo.
+              </div>
+              <div class="resource-link">Explorar YouMind →</div>
+            </div>
+          </a>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section fade-up">
+          <div class="cta-card">
+            <div class="cta-title">
+              ¿Quieres ver todo esto<br />aplicado en vivo?
+            </div>
+            <div class="cta-desc">
+              Sigue mi contenido en Instagram para ver estas herramientas
+              aplicadas paso a paso y conocer las próximas sesiones.
+            </div>
+            <a
+              href="https://www.instagram.com/juanuribe.ia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              >Ver mi Instagram
+              <img
+                class="external-arrow"
+                src="/assets/arrow-up-right.svg"
+                width="18"
+                height="18"
+                alt=""
+                aria-hidden="true"
+            /></a>
+            <br /><br />
+            <a
+              href="https://wa.me/573153730092"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline"
+            >
+              Escríbeme directo</a
+            >
+          </div>
+        </section>
       </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- USE CASES -->
-  <section class="usecases fade-up" id="usecases">
-    <div class="section-label">Casos de uso</div>
-    <div class="section-title">¿Qué puedes crear con esto?</div>
-    <div class="section-desc">Todo lo que antes necesitaba un equipo completo, ahora lo haces tú.</div>
-
-    <div class="usecase-grid">
-      <div class="usecase-card">
-        <div class="uc-icon">📷</div>
-        <div class="uc-title">Fotos de producto</div>
-        <div class="uc-desc">Genera fotos nivel catálogo de cualquier producto — sobre fondo blanco, en contexto de uso, lifestyle editorial. Sin estudio, sin fotógrafo.</div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">juan<span>uribe</span>.ia</div>
+      <div class="footer-copy">
+        © 2026 juanuribe.ia. Intelligence, Automated.
       </div>
-      <div class="usecase-card">
-        <div class="uc-icon">👤</div>
-        <div class="uc-title">Contenido de marca con cara</div>
-        <div class="uc-desc">Un avatar o personaje IA que representa tu marca. Habla a cámara, presenta productos, responde preguntas. Contenido constante sin depender de nadie.</div>
-      </div>
-      <div class="usecase-card">
-        <div class="uc-icon">🎥</div>
-        <div class="uc-title">Video ads sin producción</div>
-        <div class="uc-desc">Ads estilo UGC para TikTok, Instagram y YouTube. 20 variaciones en una tarde. Testea hooks, scripts y creativos a velocidad imposible con métodos tradicionales.</div>
-      </div>
-      <div class="usecase-card">
-        <div class="uc-icon">🎨</div>
-        <div class="uc-title">Posts y carruseles</div>
-        <div class="uc-desc">Imágenes editoriales para redes, carruseles educativos, infografías visuales. Mantén una estética profesional constante sin diseñador gráfico.</div>
-      </div>
-      <div class="usecase-card">
-        <div class="uc-icon">🗣️</div>
-        <div class="uc-title">Voiceovers y narración</div>
-        <div class="uc-desc">Narra tus videos con tu propia voz clonada o una voz profesional. Reels, tutoriales, podcasts, demos. En cualquier idioma, sin micrófono.</div>
-      </div>
-      <div class="usecase-card">
-        <div class="uc-icon">🌍</div>
-        <div class="uc-title">Contenido multiidioma</div>
-        <div class="uc-desc">Traduce y genera contenido para cualquier mercado. Tu avatar habla inglés, español, portugués — con lip sync real en cada idioma.</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- QUOTE -->
-  <section class="quote-section fade-up">
-    <div class="quote-card">
-      <div class="quote-text">"La ventaja no es saber que estas herramientas existen. La ventaja es <em>saber usarlas juntas.</em>"</div>
-      <div class="quote-attr">— Juan Uribe · @juanuribe.ia</div>
-    </div>
-  </section>
-
-  <!-- TIPS PRO -->
-  <section class="tips fade-up" id="tips">
-    <div class="section-label">Tips profesionales</div>
-    <div class="section-title">Lo que nadie te dice</div>
-    <div class="section-desc">Detalles que marcan la diferencia entre un resultado amateur y uno profesional.</div>
-
-    <div class="tips-grid">
-      <div class="tip-card">
-        <div class="tip-num">01</div>
-        <div class="tip-title">El prompt es el 80% del resultado</div>
-        <div class="tip-desc">No basta con "foto de un producto". Necesitas especificar iluminación (golden hour, studio softbox), ángulo de cámara (low angle, eye level), texturas de materiales, expresión del modelo, y color grading. YouMind te da esos prompts listos.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">02</div>
-        <div class="tip-title">Genera la imagen primero, el video después</div>
-        <div class="tip-desc">El pipeline correcto es: imagen estática perfecta → animación con Kling/Seedance. Nunca generes video directo de texto — el control sobre composición es mínimo. Imagen primero, siempre.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">03</div>
-        <div class="tip-title">Lip sync: genera video mudo + voz aparte</div>
-        <div class="tip-desc">Para resultados profesionales: genera el video sin audio, luego agrega el voiceover de ElevenLabs en CapCut. Combinar ambos por separado te da control total y evita problemas de sincronización.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">04</div>
-        <div class="tip-title">Consistencia mata variedad</div>
-        <div class="tip-desc">Una marca fuerte usa el mismo estilo visual, la misma paleta, la misma voz. Crea un prompt base y reutilízalo con variaciones. Pomelli de Google puede analizar tu web y mantener esa consistencia automáticamente.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">05</div>
-        <div class="tip-title">Empieza gratis, escala pagando</div>
-        <div class="tip-desc">MiniMax para voz, Nano Banana Pro para imágenes, Wan 2.7 para video, YouMind para prompts — todo tiene tier gratuito. Valida tu proceso antes de invertir. Cuando el ROI sea claro, pasa a ElevenLabs + Kling + HeyGen.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">06</div>
-        <div class="tip-title">El contenido que funciona no "parece IA"</div>
-        <div class="tip-desc">El objetivo no es que la gente diga "wow, eso es IA." El objetivo es que el contenido se vea tan real que nadie pregunte cómo se hizo. Los detalles en el prompt — grano de película, imperfecciones en la piel, ropa con arrugas — hacen esa diferencia.</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- RESOURCE: YouMind -->
-  <section class="resources fade-up">
-    <div class="section-label">Recurso destacado</div>
-    <div class="section-title">Tu nueva herramienta favorita para prompts</div>
-
-    <a href="https://youmind.com/prompts" target="_blank" class="resource-card">
-      <div class="resource-icon">🧠</div>
-      <div class="resource-body">
-        <div class="resource-title">YouMind — La librería de prompts más grande del mundo</div>
-        <div class="resource-desc">Más de 20,000 prompts curados para Nano Banana Pro, GPT Image 2, Seedance 2.0, Midjourney y más. Filtros por modelo, categoría y engagement. Anime, cómic, realismo, producto, avatares, flyers — todo lo que puedas imaginar, ya tiene un prompt listo.</div>
-        <div class="resource-link">Explorar YouMind →</div>
-      </div>
-    </a>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section fade-up">
-    <div class="cta-card">
-      <div class="cta-title">¿Quieres ver todo esto<br/>aplicado en vivo?</div>
-      <div class="cta-desc">Este miércoles 3 de junio hago un webinar gratuito donde te muestro cómo usar estas herramientas paso a paso — desde el prompt hasta el post publicado.</div>
-      <a href="https://www.instagram.com/juanuribe.ia/" target="_blank" class="btn-primary" style="font-size:15px;padding:16px 32px;">Comenta JOIN en mi último post →</a>
-      <br/><br/>
-      <a href="https://wa.me/573153730092" target="_blank" class="btn-outline">💬 Escríbeme directo</a>
-    </div>
-  </section>
-
-</div>
-
-<footer>
-  <div class="footer-brand">juan<span>uribe</span>.ia</div>
-  <div class="footer-copy">© 2026 juanuribe.ia — Intelligence, Automated.</div>
-</footer>
-
-<script>
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.06 });
-  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-</script>
-
-</body>
+    </footer>
+  </body>
 </html>

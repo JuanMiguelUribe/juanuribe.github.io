@@ -1,0 +1,869 @@
+.resource-page {
+  --white: var(--paper);
+  --off-white: var(--surface);
+  --border: var(--line);
+  --border-dark: var(--line);
+  --green-light: var(--surface);
+  --bg-warm: var(--surface);
+  --surface-solid: var(--paper);
+  --glass: var(--surface);
+  --glass-strong: var(--surface);
+  --glass-border: var(--line);
+  --accent-light: var(--accent);
+  --accent-bg: var(--surface);
+  --accent-border: var(--line);
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-glass: none;
+  --shadow-green: none;
+  background: var(--paper);
+  font-family: var(--font);
+  color: var(--ink);
+}
+.resource-page
+  :is(
+    h1,
+    h2,
+    h3,
+    .section-title,
+    .cat-title,
+    .tool-name,
+    .card-name,
+    .pipe-num,
+    .tip-num,
+    .quote-text,
+    .cta-title,
+    .about-name,
+    .stat-num,
+    .demo-title,
+    .resource-title
+  ) {
+  font-family: var(--font);
+  font-weight: 500;
+  letter-spacing: -0.7px;
+}
+.resource-page
+  :is(
+    .tool-category,
+    .tool-cat,
+    .card-cat,
+    .section-tag,
+    .hero-note,
+    .stat-label,
+    .tool-tag,
+    .tool-badge,
+    .tool-verdict,
+    .tool-link,
+    .card-tag,
+    .tool-price,
+    .cat-badge,
+    .quote-author,
+    .quote-attr,
+    .about-handle,
+    .about-pill,
+    .about-photo-tag,
+    .demo-step,
+    .demo-tool-pill,
+    .hero-pill,
+    .hero-badge
+  ) {
+  font-family: var(--font);
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+.resource-page
+  :is(
+    .tool-desc,
+    .card-desc,
+    .cat-sub,
+    .pipe-desc,
+    .uc-desc,
+    .tip-desc,
+    .section-desc,
+    .hero-sub
+  ) {
+  font-weight: 400;
+  line-height: 1.65;
+  font-size: 15px;
+  color: var(--muted);
+}
+.resource-page .section-title {
+  font-size: clamp(30px, 3.5vw, 46px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.resource-page .section-desc {
+  max-width: 640px;
+}
+.resource-page .section-tag {
+  font-size: 12px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+.resource-page :is(.hero, #hero) {
+  padding: 72px 0 60px;
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.resource-page :is(.hero h1, #hero h1) {
+  font-family: var(--font);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+  max-width: 900px;
+  margin: 0 0 24px;
+  color: var(--ink);
+}
+.resource-page .hero h1 em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--accent);
+}
+.resource-page :is(.hero-sub, #hero p) {
+  max-width: 610px;
+  margin: 0 0 28px;
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--muted);
+}
+.resource-page .hero-ctas {
+  justify-content: flex-start;
+}
+.resource-page :is(.hero-pill, .hero-badge) {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+.resource-page :is(.hero-pill, .hero-badge)::before {
+  display: none;
+}
+.resource-page .container {
+  max-width: 1200px;
+  padding: 0 48px;
+}
+.resource-page
+  :is(.tools-section, .showcase, .pipeline, .usecases, .tips, .resources) {
+  padding: 64px 0;
+}
+.resource-page .divider {
+  border-color: var(--line);
+}
+.resource-page :is(.pipeline-grid, .usecase-grid, .tips-grid) {
+  gap: 20px;
+}
+.resource-page :is(.pipe-step, .usecase-card, .tip-card) {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 28px 0;
+  text-align: left;
+}
+.resource-page :is(.pipe-step, .usecase-card):hover {
+  transform: none;
+  box-shadow: none;
+}
+.resource-page :is(.pipe-num, .tip-num) {
+  opacity: 1;
+  font-size: 28px;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+.resource-page .pipe-arrow {
+  display: none;
+}
+.resource-page .pipe-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.resource-page :is(.tool-card, .tool-sm, .featured-card) {
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 28px 0;
+  text-decoration: none;
+  display: block;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    border-color 0.2s;
+}
+.resource-page :is(.tool-card, .tool-sm, .featured-card):hover {
+  background: var(--surface);
+  border-color: #9baa94;
+  box-shadow: none;
+  transform: none;
+}
+.resource-page :is(.tool-card, .featured-card)::before,
+.resource-page .tool-card::after {
+  display: none;
+}
+.resource-page :is(.featured-card.dark, .tool-card.featured) {
+  background: transparent;
+  border-color: var(--line);
+}
+.resource-page
+  :is(.featured-card.dark, .tool-card.featured)
+  :is(
+    .tool-name,
+    .tool-category,
+    .tool-cat,
+    .tool-desc,
+    .tool-verdict,
+    .tool-link,
+    .verdict-label,
+    .verdict-hl,
+    .tool-tag
+  ) {
+  color: var(--ink);
+}
+.resource-page :is(.featured-card.dark, .tool-card.featured) .tool-desc {
+  color: var(--muted);
+}
+.resource-page :is(.featured-card.dark, .tool-card.featured) .tool-verdict {
+  color: var(--muted);
+  border-color: var(--line);
+}
+.resource-page :is(.tool-badge, .tool-tag, .cat-badge, .card-tag, .tool-price) {
+  border: 0;
+  color: var(--accent) !important;
+  background: transparent !important;
+  font-size: 11px;
+  border-radius: 0;
+  padding: 4px 0;
+}
+.resource-page .tool-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.tool-monogram,
+.resource-page .tool-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  width: 46px;
+  height: 46px;
+  font: 500 15px var(--font);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.resource-page .card-logo-wrap {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.card-logo-wrap .tool-monogram {
+  width: 40px;
+  height: 40px;
+}
+.resource-page :is(.tool-name, .card-name) {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.resource-page :is(.tool-category, .tool-cat, .card-cat) {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.resource-page .tool-verdict {
+  font-size: 13px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+.resource-page .tool-link {
+  font-size: 13px;
+  text-transform: none;
+  display: inline-block;
+  color: var(--accent);
+  margin-top: 20px;
+}
+.resource-page .card-desc {
+  font-size: 15px;
+}
+.resource-page .tool-sm .tool-name {
+  font-size: 20px;
+}
+.resource-page .demo-card {
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  overflow: hidden;
+}
+.resource-page .demo-media {
+  background: var(--surface);
+}
+.resource-page .demo-media :is(img, video) {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/4.5;
+}
+.resource-page .demo-info {
+  padding: 28px;
+}
+.resource-page .demo-title {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+.resource-page .demo-desc {
+  font-size: 15px;
+  color: var(--muted);
+}
+.resource-page .demo-step {
+  font-size: 11px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.resource-page .demo-tool-pill {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--accent);
+  border-radius: 0;
+  font-size: 11px;
+}
+.resource-page .demo-notice {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 24px;
+  color: var(--muted);
+}
+.resource-page .demo-notice-text {
+  font-size: 14px;
+}
+.resource-page
+  :is(.quote-card, .quote-banner, .cta-card, .cta-box, .about-card) {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.resource-page
+  :is(.quote-card, .quote-banner, .cta-card, .cta-box, .about-card)::before,
+.resource-page .about-card::after {
+  display: none;
+}
+.resource-page
+  :is(
+    .quote-text,
+    .quote-text .green,
+    .quote-text em,
+    .about-name,
+    .about-bio strong
+  ) {
+  color: var(--ink);
+}
+.resource-page :is(.quote-author, .quote-attr, .about-bio, .about-handle) {
+  color: var(--muted);
+}
+.resource-page .about-photo {
+  border: 0;
+  border-radius: 0;
+  filter: grayscale(100%);
+}
+.resource-page .about-photo-border {
+  display: none;
+}
+.resource-page .about-photo-tag {
+  background: var(--accent);
+  color: white;
+  border-radius: 0;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.resource-page .about-pill {
+  border-color: #b3c1ae;
+  color: var(--accent);
+  font-size: 12px;
+  border-radius: 0;
+}
+.resource-page .resource-card {
+  background: var(--surface);
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+.resource-page .resource-title {
+  font-size: 24px;
+}
+.resource-page .resource-desc {
+  font-size: 15px;
+  color: var(--muted);
+}
+.resource-page .cta-desc {
+  color: var(--muted);
+  font-size: 17px;
+}
+.resource-page .cta-title {
+  font-size: 40px;
+  line-height: 1.12;
+  color: var(--ink);
+}
+.resource-page .cta-card {
+  padding: 56px;
+  text-align: left;
+}
+.resource-page .btn-ghost {
+  margin: 0;
+}
+.resource-page .site-footer {
+  background: var(--paper);
+}
+.tools-page #hero {
+  padding: 72px 48px 48px;
+  max-width: 1200px;
+}
+.tools-page .section,
+.tools-page .about-section {
+  max-width: 1200px;
+  padding: 0 48px 80px;
+}
+.tools-page .featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7%;
+  margin-bottom: 40px;
+}
+.tools-page .tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.tools-page .stats-row {
+  max-width: 1104px;
+  margin: 0 auto 64px;
+  justify-content: flex-start;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.tools-page .stat-box {
+  text-align: left;
+  padding: 24px 0;
+  max-width: 230px;
+  border: 0;
+}
+.tools-page .stat-num {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.tools-page .stat-label {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+}
+.resource-page .category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 48px;
+}
+.category-nav a {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--accent);
+}
+.category-nav a:hover {
+  background: var(--surface);
+}
+.tools-page .category-nav {
+  max-width: 1104px;
+  margin: 0 auto 64px;
+}
+.tools-page .divider {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 48px;
+}
+.tools-page .divider-line {
+  height: 1px;
+  background: var(--line);
+}
+.tools-page .quote-banner {
+  margin: 0 48px 80px;
+  padding: 56px;
+}
+.tools-page .about-card {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  padding: 48px;
+}
+.tools-page .about-photo {
+  width: 200px;
+  height: 250px;
+}
+.tools-page .about-name {
+  font-size: 38px;
+}
+.tools-page .about-handle {
+  font-size: 14px;
+  margin: 8px 0 20px;
+}
+.tools-page .about-bio {
+  max-width: 600px;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.tools-page .about-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tools-page .cta-section {
+  max-width: 1200px;
+  padding: 0 48px 80px;
+  text-align: left;
+}
+.tools-page .cta-box {
+  padding: 48px;
+}
+.tools-page .cta-desc {
+  max-width: 600px;
+  margin: 20px 0 28px;
+}
+.resource-page .tools-category {
+  margin-bottom: 48px;
+}
+.resource-page .cat-title {
+  font-size: 30px;
+}
+.resource-page .quote-text {
+  font-size: 32px;
+  max-width: 740px;
+  line-height: 1.3;
+}
+.tools-page .stats-row {
+  display: flex;
+  gap: 80px;
+}
+.tools-page .stat-box {
+  flex: 1;
+}
+.resource-page .hero-note {
+  font-size: 12px;
+  color: var(--muted);
+}
+.resource-page .section-header {
+  margin-bottom: 28px;
+}
+.resource-page .tool-desc {
+  margin-bottom: 16px;
+}
+.resource-page .card-desc {
+  margin-bottom: 16px;
+}
+.resource-page .card-tag {
+  display: inline-block;
+  margin-top: 8px;
+}
+.resource-page .tool-category {
+  margin-bottom: 14px;
+}
+.resource-page .tool-verdict {
+  line-height: 1.6;
+}
+.tools-page .quote-inner {
+  max-width: 760px;
+  margin: auto;
+}
+.tools-page .quote-author {
+  font-size: 12px;
+  margin-top: 20px;
+}
+@media (max-width: 1023px) {
+  .guide-page .pipeline-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .guide-page .usecase-grid,
+  .guide-page .tools-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tools-page .stats-row,
+  .tools-page .category-nav {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .resource-page .site-nav-links {
+    gap: 16px;
+  }
+  .resource-page .site-nav-links a {
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .resource-page :is(.hero, #hero) {
+    padding: 44px 0;
+  }
+  .resource-page :is(.hero h1, #hero h1) {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+  .resource-page :is(.hero-sub, #hero p) {
+    font-size: 16px;
+  }
+  .resource-page .container {
+    padding: 0 24px;
+  }
+  .resource-page
+    :is(.tools-section, .showcase, .pipeline, .usecases, .tips, .resources) {
+    padding: 48px 0;
+  }
+  .resource-page
+    :is(
+      .pipeline-grid,
+      .usecase-grid,
+      .tips-grid,
+      .tools-grid-2,
+      .tools-grid-3,
+      .showcase-demo
+    ) {
+    grid-template-columns: 1fr;
+  }
+  .resource-page .section-title {
+    font-size: 34px;
+  }
+  .resource-page :is(.tool-card, .tool-sm, .featured-card) {
+    padding: 24px 0;
+  }
+  .resource-page .cta-card {
+    padding: 32px 24px;
+  }
+  .resource-page .cta-title {
+    font-size: 34px;
+  }
+  .resource-page .demo-info {
+    padding: 24px;
+  }
+  .resource-page .quote-card {
+    padding: 32px 24px;
+  }
+  .resource-page .quote-text {
+    font-size: 26px;
+  }
+  .tools-page #hero {
+    padding: 44px 24px;
+  }
+  .tools-page .section,
+  .tools-page .about-section {
+    padding: 0 24px 56px;
+  }
+  .tools-page :is(.featured-grid, .tools-grid) {
+    grid-template-columns: 1fr;
+  }
+  .tools-page .stats-row {
+    margin: 0 24px 40px;
+    gap: 20px;
+  }
+  .tools-page .stat-box {
+    padding: 18px 0;
+    min-width: 0;
+  }
+  .tools-page .stat-num {
+    font-size: 26px;
+  }
+  .tools-page .stat-label {
+    font-size: 10px;
+  }
+  .tools-page .category-nav {
+    margin: 0 24px 48px;
+  }
+  .tools-page .quote-banner {
+    padding: 32px 24px;
+    margin: 0 24px 56px;
+  }
+  .tools-page .about-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 32px;
+    padding: 32px 24px;
+  }
+  .tools-page .about-photo {
+    width: 160px;
+    height: 200px;
+  }
+  .tools-page .about-pills {
+    justify-content: flex-start;
+  }
+  .tools-page .cta-section {
+    padding: 0 24px 56px;
+  }
+  .tools-page .cta-box {
+    padding: 32px 24px;
+  }
+  .tools-page .btn-ghost {
+    margin-top: 12px;
+  }
+  .tools-page .divider {
+    padding: 0 24px;
+  }
+  .resource-page .demo-info > div {
+    min-width: 0 !important;
+  }
+}
+
+.resource-page :is(.tool-monogram, .card-logo-wrap) {
+  display: none;
+}
+.resource-page .tool-top {
+  margin-bottom: 12px;
+  justify-content: flex-start;
+}
+.resource-page .tool-verdict {
+  border: 0;
+  padding-top: 0;
+  margin-top: 20px;
+}
+.resource-page :is(.tool-category, .tool-cat, .card-cat) {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13px;
+}
+.resource-page :is(.demo-card, .resource-card) {
+  border: 0;
+  background: transparent;
+}
+.resource-page .demo-info {
+  padding: 24px 0;
+}
+.resource-page .section-label::before {
+  display: none;
+}
+.resource-page .category-nav a {
+  padding-left: 0;
+  padding-right: 0;
+}
+.resource-page .category-nav {
+  gap: 12px 28px;
+}
+.resource-page .demo-notice {
+  background: transparent;
+  border-left: 2px solid var(--accent);
+  padding: 8px 0 8px 24px;
+}
+.resource-page :is(.about-pill, .about-photo-tag, .demo-tool-pill) {
+  background: transparent;
+  border: 0;
+  color: var(--accent);
+  padding-left: 0;
+}
+.resource-page :is(.quote-card, .quote-banner) {
+  border-top: 1px solid var(--line);
+  padding-left: 0;
+  padding-right: 0;
+}
+.tools-page .tools-grid > .tool-card {
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: 0 8%;
+}
+.tools-page .tools-grid :is(.card-name, .card-cat, .card-tag) {
+  grid-column: 1;
+}
+.tools-page .tools-grid .card-name {
+  grid-row: 1;
+}
+.tools-page .tools-grid .card-cat {
+  grid-row: 2;
+}
+.tools-page .tools-grid .card-tag {
+  grid-row: 3;
+  font-size: 12px;
+}
+.tools-page .tools-grid .card-desc {
+  grid-column: 2;
+  grid-row: 1/4;
+  max-width: 600px;
+  margin: 0;
+}
+.tools-page .tool-card:hover :is(.card-name, .tool-name),
+.resource-page .featured-card:hover .tool-name {
+  text-decoration: underline;
+}
+.resource-page .tool-card:hover,
+.resource-page .featured-card:hover {
+  background: transparent;
+}
+.tools-page .about-card {
+  padding: 0;
+}
+.tools-page .cta-box {
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+}
+.guide-page .cta-card {
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 767px) {
+  .tools-page .tools-grid > .tool-card {
+    display: block;
+  }
+  .tools-page .tools-grid .card-desc {
+    margin: 16px 0;
+  }
+  .resource-page .demo-info,
+  .resource-page .cta-card,
+  .tools-page .about-card,
+  .tools-page .cta-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .resource-page .quote-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.resource-page .prompt-note {
+  padding: 28px 0;
+  max-width: 440px;
+}
+.resource-page .prompt-note .tool-desc {
+  margin-top: 16px;
+}
