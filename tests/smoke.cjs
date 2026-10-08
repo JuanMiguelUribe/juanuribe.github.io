@@ -10,7 +10,7 @@ const base = process.env.SITE_URL || "http://127.0.0.1:8000";
   });
   try {
     for (const width of [360, 390, 768, 1024, 1440]) {
-      for (const path of ["/", "/herramientas/", "/contenido-ia/"]) {
+      for (const path of Object.keys(require("../scripts/public-pages.json"))) {
         const page = await browser.newPage({
           viewport: { width, height: 900 },
         });
@@ -118,11 +118,40 @@ const base = process.env.SITE_URL || "http://127.0.0.1:8000";
       true,
     );
     assert.equal(await staticPage.locator(".form-submit").isDisabled(), true);
+    for (const path of Object.keys(require("../scripts/public-pages.json"))) {
+      await staticPage.goto(base + path);
+      assert.equal(
+        await staticPage.evaluate(() =>
+          [...document.querySelectorAll("main .fade-up, main .fade-in")].every(
+            (element) => getComputedStyle(element).opacity === "1",
+          ),
+        ),
+        true,
+        `${path}: legacy sections readable without JavaScript`,
+      );
+    }
     await noScript.close();
     const reducedMotion = await browser.newContext({ reducedMotion: "reduce" });
     const reducedPage = await reducedMotion.newPage();
     await reducedPage.goto(base);
     assert.equal(await reducedPage.locator(".reveal-ready").count(), 0);
+    for (const path of Object.keys(require("../scripts/public-pages.json"))) {
+      await reducedPage.goto(base + path);
+      assert.equal(
+        await reducedPage.locator(".reveal-ready").count(),
+        0,
+        `${path}: reduced motion`,
+      );
+      assert.equal(
+        await reducedPage.evaluate(() =>
+          [...document.querySelectorAll("main .fade-up, main .fade-in")].every(
+            (element) => getComputedStyle(element).opacity === "1",
+          ),
+        ),
+        true,
+        `${path}: sections readable with reduced motion`,
+      );
+    }
     await reducedMotion.close();
     console.log("PASS content without JavaScript and reduced motion");
   } finally {

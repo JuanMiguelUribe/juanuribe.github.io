@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /brand-knowledge/
+Disallow: /_site-content/
+Disallow: /.agents/
+Sitemap: https://juanuribeia.com/sitemap.xml

@@ -1,0 +1,61 @@
+/* The two original reference pages retain their specialized layouts. */
+.resource-page .breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 48px 0;
+}
+.resource-page .site-footer {
+  background: var(--paper);
+  font-family: var(--font);
+}
+.resource-page
+  :is(.btn-primary, .btn-secondary, .btn-outline, .btn-green, .btn-ghost) {
+  font-family: var(--font);
+  background: none;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  color: var(--ink);
+  padding: 12px 0;
+  min-height: 48px;
+}
+.resource-page :is(.btn-primary, .btn-outline):hover {
+  background: none;
+  color: var(--accent);
+  transform: none;
+}
+.resource-page :is(.hero h1, #hero h1) {
+  font-weight: 600;
+  line-height: 1.05;
+}
+.resource-page .about-section {
+  padding-bottom: 48px;
+}
+.resource-page .quote-card {
+  border-top: 1px solid var(--line);
+}
+.resource-page .site-nav-links a {
+  font-size: 14px;
+}
+.resource-page .section-label {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.resource-page .section-label::before {
+  display: none;
+}
+.resource-page .footer-top p {
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  .resource-page .breadcrumb {
+    padding: 12px 24px 0;
+  }
+  .resource-page .site-nav-links {
+    display: none;
+  }
+  .resource-page :is(.hero h1, #hero h1) {
+    font-size: 46px;
+  }
+}

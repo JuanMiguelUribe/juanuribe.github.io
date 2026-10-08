@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Empezar a crear música | Juan Uribe</title>
+    <meta
+      name="description"
+      content="Una dirección musical y un registro de cambios para comparar versiones. Una práctica de IA con Juan Uribe."
+    />
+    <link rel="canonical" href="https://juanuribeia.com/aprender/musica/" />
+    <meta name="theme-color" content="#f7f8f4" />
+    <meta property="og:title" content="Empezar a crear música | Juan Uribe" />
+    <meta
+      property="og:description"
+      content="Una dirección musical y un registro de cambios para comparar versiones. Una práctica de IA con Juan Uribe."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://juanuribeia.com/aprender/musica/"
+    />
+    <meta
+      property="og:image"
+      content="https://juanuribeia.com/assets/juan-uribe.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Empezar a crear música | Juan Uribe",
+        "description": "Una dirección musical y un registro de cambios para comparar versiones. Una práctica de IA con Juan Uribe.",
+        "url": "https://juanuribeia.com/aprender/musica/",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "juanuribe.ia",
+          "url": "https://juanuribeia.com/"
+        }
+      }
+    </script>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="/assets/fonts/archivo-latin-standard-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <script src="/assets/site.js" defer></script>
+    <script src="/assets/lesson.js" defer></script>
+  </head>
+  <body class="site-page">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a class="site-brand" href="/">juanuribe<span>.ia</span></a>
+        <ul class="site-nav-links">
+          <li><a href="/aprender/" aria-current="location">Aprender</a></li>
+          <li><a href="/recursos/">Recursos</a></li>
+          <li><a href="/trabaja-conmigo/">Mi trabajo</a></li>
+          <li><a href="/sobre-mi/">Sobre mí</a></li>
+        </ul>
+        <a
+          class="nav-cta"
+          href="https://www.instagram.com/juanuribe.ia/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Seguir en Instagram<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          Menú <span aria-hidden="true">+</span>
+        </button>
+      </nav>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" hidden>
+        <a class="" href="/aprender/"
+          >Aprender<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/recursos/"
+          >Recursos<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/trabaja-conmigo/"
+          >Mi trabajo<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/sobre-mi/"
+          >Sobre mí<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/comunidad/"
+          >Comunidad<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/herramientas/"
+          >Herramientas<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/contenido-ia/"
+          >Guía de contenido IA<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg
+        ></a>
+      </nav>
+    </header>
+    <noscript
+      ><nav class="nojs-links" aria-label="Explorar el sitio">
+        <a class="" href="/aprender/"
+          >Aprender<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/recursos/"
+          >Recursos<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/trabaja-conmigo/"
+          >Mi trabajo<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/sobre-mi/"
+          >Sobre mí<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/comunidad/"
+          >Comunidad<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/herramientas/"
+          >Herramientas<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><a class="" href="/contenido-ia/"
+          >Guía de contenido IA<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg
+        ></a></nav
+    ></noscript>
+    <main id="main-content" tabindex="-1">
+      <nav class="breadcrumb" aria-label="Ubicación">
+        <a class="" href="/"
+          >Inicio<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><span aria-hidden="true">/</span
+        ><a class="" href="/aprender/"
+          >Aprender<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg></a
+        ><span aria-hidden="true">/</span
+        ><span aria-current="page">Empezar a crear música</span>
+      </nav>
+      <section class="page-hero">
+        <p class="overline">Práctica abierta</p>
+        <h1>Empieza por<br />lo que quieres escuchar.</h1>
+        <p class="lead">
+          La generación musical sirve para explorar ideas, estilos y
+          estructuras. Un encargo musical claro te ayuda a escuchar con
+          criterio, comparar versiones y decidir qué dirección seguir.
+        </p>
+        <div class="actions"></div>
+      </section>
+      <div class="lesson-layout">
+        <aside class="lesson-sidebar" aria-label="Antes de empezar">
+          <h2>Qué vas a practicar</h2>
+          <p>
+            Una dirección musical y un registro de cambios para comparar
+            versiones.
+          </p>
+          <h2>Qué necesitas</h2>
+          <p>
+            Una idea propia y una herramienta de generación musical. Puedes
+            empezar escribiendo el encargo, sin abrir una cuenta.
+          </p>
+          <a class="text-link" href="#practica"
+            >Ir al ejercicio<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg
+          ></a>
+        </aside>
+        <div class="lesson-body">
+          <ol class="lesson-steps">
+            <li>
+              <h2>Define intención y contexto.</h2>
+              <p>
+                ¿La pieza acompaña un video, explora una canción o busca una
+                textura? Anota qué debería hacer sentir y cuánto espacio
+                necesita dejar para voz u otros sonidos.
+              </p>
+            </li>
+            <li>
+              <h2>Describe decisiones musicales.</h2>
+              <p>
+                Piensa en ritmo, instrumentos, energía, voz o ausencia de voz y
+                estructura. Es más útil pedir características que esperar que
+                una referencia vaga produzca exactamente lo que tienes en mente.
+              </p>
+            </li>
+            <li>
+              <h2>Escucha versiones con la misma pregunta.</h2>
+              <p>
+                Compara inicio, desarrollo, transiciones y final. Registra qué
+                funciona para tu intención y qué te distrae. No confundas una
+                sorpresa interesante con una pieza que ya está lista.
+              </p>
+            </li>
+            <li>
+              <h2>Itera sobre un cambio concreto.</h2>
+              <p>
+                Ajusta energía, instrumentación o estructura, una a la vez.
+                Guarda las versiones y tus notas para entender por qué prefieres
+                una sobre otra.
+              </p>
+            </li>
+          </ol>
+          <section class="prompt-example">
+            <div>
+              <h2>Una estructura para probar.</h2>
+              <p>Rellena los campos con tu propio contexto.</p>
+            </div>
+            <pre id="example-prompt"><code>Uso: acompañar un video de [tema].
+Carácter: [calmo, enérgico, tenso u otro].
+Instrumentos: [elige pocos elementos].
+Voz: [instrumental o descripción de la voz].
+Estructura: inicio [descripción], desarrollo [descripción], final [descripción].
+Criterio: debe dejar espacio para [narración, diálogo o el foco del video].</code></pre>
+            <button
+              type="button"
+              class="text-button copy-prompt"
+              data-copy="example-prompt"
+              hidden
+            >
+              Copiar estructura
+              <svg
+                class="arrow"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M5 19 19 5M5 5h14v14" />
+              </svg>
+            </button>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </section>
+          <section class="exercise" id="practica">
+            <p class="overline">Tu turno</p>
+            <h2>Llévalo a una idea propia.</h2>
+            <p>
+              Redacta dos encargos para el mismo video: uno tranquilo y otro
+              enérgico. Si generas versiones, escucha ambas junto al video y
+              anota cuál sostiene mejor la intención.
+            </p>
+          </section>
+          <section class="lesson-limit">
+            <h2>Qué conviene revisar.</h2>
+            <p>
+              Las opciones, planes y permisos de uso dependen de la herramienta.
+              Revisa sus condiciones para el uso que necesitas y conserva el
+              origen de cada pieza.
+            </p>
+          </section>
+          <section class="lesson-next">
+            <h2>Sigue explorando.</h2>
+            <a
+              class="text-link"
+              href="https://suno.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Explorar Suno<svg
+                class="arrow"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M5 19 19 5M5 5h14v14" /></svg></a
+            ><a class="text-link" href="/recursos/"
+              >Encuentra recursos para la práctica<svg
+                class="arrow"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M5 19 19 5M5 5h14v14" /></svg
+            ></a>
+          </section>
+        </div>
+      </div>
+      <section class="follow-band" id="social">
+        <div>
+          <h2>¿Qué parte quieres<br />que expliquemos mejor?</h2>
+          <p>
+            Lleva tu duda a Instagram. Puede ser el punto de partida de la
+            siguiente práctica.
+          </p>
+        </div>
+        <a
+          class="button button-light"
+          href="https://www.instagram.com/juanuribe.ia/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Seguir a @juanuribe.ia<svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M5 19 19 5M5 5h14v14" /></svg
+        ></a>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div>
+          <a class="site-brand" href="/">juanuribe<span>.ia</span></a>
+          <p>IA aplicada.<br />Procesos que puedes aprender.</p>
+        </div>
+        <nav aria-label="Aprendizaje">
+          <p>Para aprender</p>
+          <a class="" href="/aprender/"
+            >Por dónde empezar<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></a
+          ><a class="" href="/recursos/"
+            >Recursos gratis<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></a
+          ><a class="" href="/herramientas/"
+            >Herramientas<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></a
+          ><a class="" href="/contenido-ia/"
+            >Contenido con IA<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg
+          ></a>
+        </nav>
+        <nav aria-label="Juan Uribe">
+          <p>Más de Juan</p>
+          <a class="" href="/sobre-mi/"
+            >Sobre mí<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></a
+          ><a class="" href="/comunidad/"
+            >Comunidad<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></a
+          ><a class="" href="/trabaja-conmigo/"
+            >Trabaja conmigo<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg
+          ></a>
+        </nav>
+        <nav aria-label="Redes sociales">
+          <p>Nos encontramos en</p>
+          <a
+            class=""
+            href="https://www.instagram.com/juanuribe.ia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></a
+          ><a
+            class=""
+            href="https://www.tiktok.com/@juanuribe.ia"
+            target="_blank"
+            rel="noopener noreferrer"
+            >TikTok<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></a
+          ><a
+            class=""
+            href="https://www.youtube.com/@JuanUribeIA"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg
+          ></a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Juan Uribe</span
+        ><span>Inteligencia artificial. Criterio humano.</span>
+      </div>
+    </footer>
+  </body>
+</html>

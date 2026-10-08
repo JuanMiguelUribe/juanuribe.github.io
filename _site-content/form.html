@@ -1,0 +1,76 @@
+<details class="form-container fade-in">
+            <summary>Prefiero recibir las guías por correo</summary>
+            <form id="guide-form">
+              <p class="form-title">Solicitar por correo</p>
+              <p class="form-subtitle">
+                Solicita las guías por correo o descárgalas directamente con los
+                enlaces de esta sección.
+              </p>
+              <div class="form-group">
+                <label for="fname">Nombre</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="name"
+                  pattern=".*\S.*"
+                  title="Escribe tu nombre, no solo espacios."
+                  autocomplete="given-name"
+                  required
+                  maxlength="100"
+                  placeholder="Tu nombre"
+                />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input
+                  type="email"
+                  id="femail"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  maxlength="254"
+                  placeholder="tu@email.com"
+                />
+              </div>
+              <button class="btn-primary form-submit" type="submit" disabled>
+                Solicitar las guías
+              </button>
+              <noscript
+                ><p>
+                  Para solicitar el correo necesitas JavaScript. Puedes
+                  descargar las guías directamente desde los enlaces de esta
+                  sección.
+                </p></noscript
+              >
+              <p class="form-note">
+                Al enviar, compartes tu nombre y correo para solicitar estos
+                recursos. También puedes descargarlos sin dejar tus datos.
+              </p>
+              <p
+                id="form-status"
+                class="form-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+            <div class="form-success" id="form-success" hidden>
+              <h3>Tus guías, a un clic</h3>
+              <p>Descarga las guías directamente desde estos enlaces.</p>
+              <div class="guide-links">
+                <a
+                  href="https://drive.google.com/file/d/1M2VywKTa9xz9Zi6I-hS4RYZtp8-ADnHU/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="guide-link-btn"
+                  >↓ Guía Herramientas IA</a
+                >
+                <a
+                  href="https://drive.google.com/file/d/1CUzY2h8OqxDw9Mat3KaLEUUJMjLE5flA/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="guide-link-btn"
+                  >↓ Guía Horizontal a Vertical</a
+                >
+              </div>
+            </div>
+          </details>

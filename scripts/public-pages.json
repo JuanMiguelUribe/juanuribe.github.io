@@ -1,0 +1,50 @@
+{
+  "/": {
+    "title": "Aprende IA creando",
+    "file": "index.html"
+  },
+  "/aprender/": {
+    "title": "Por dónde empezar con IA",
+    "file": "aprender/index.html"
+  },
+  "/recursos/": {
+    "title": "Recursos gratuitos de IA",
+    "file": "recursos/index.html"
+  },
+  "/comunidad/": {
+    "title": "La comunidad de juanuribe.ia",
+    "file": "comunidad/index.html"
+  },
+  "/sobre-mi/": {
+    "title": "Sobre Juan Uribe",
+    "file": "sobre-mi/index.html"
+  },
+  "/trabaja-conmigo/": {
+    "title": "IA para tu proyecto",
+    "file": "trabaja-conmigo/index.html"
+  },
+  "/aprender/llms/": {
+    "title": "Pensar y trabajar con LLMs",
+    "file": "aprender/llms/index.html"
+  },
+  "/aprender/imagen-y-video/": {
+    "title": "Crear imagen y video",
+    "file": "aprender/imagen-y-video/index.html"
+  },
+  "/aprender/automatizacion/": {
+    "title": "Construir una automatización",
+    "file": "aprender/automatizacion/index.html"
+  },
+  "/aprender/musica/": {
+    "title": "Empezar a crear música",
+    "file": "aprender/musica/index.html"
+  },
+  "/herramientas/": {
+    "title": "Herramientas IA que uso",
+    "file": "herramientas/index.html"
+  },
+  "/contenido-ia/": {
+    "title": "Crear contenido con IA",
+    "file": "contenido-ia/index.html"
+  }
+}

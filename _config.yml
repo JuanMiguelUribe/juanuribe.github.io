@@ -1,0 +1,10 @@
+# Publish the static public pages; keep tooling and brand working files out of Pages.
+exclude:
+  - scripts
+  - tests
+  - _site-content
+  - design-system
+  - brand-knowledge
+  - .agents
+  - AGENTS.md
+  - README.md
