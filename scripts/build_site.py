@@ -569,6 +569,8 @@ error.write_text(
     )
 )
 PAGES.pop("/404.html")
+# Standalone campaign page, maintained directly in kling/.
+PAGES["/kling/"] = {"title": "Kling 4.0: qué cambia y dónde probarlo", "file": "kling/index.html"}
 # Structured data and discovery use public pages only.
 (ROOT / "sitemap.xml").write_text(
     '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'

@@ -43,7 +43,7 @@ const base = process.env.SITE_URL || "http://127.0.0.1:8000";
             `${path}: broken loaded images`,
           );
           assert.deepEqual(result.brokenAnchors, [], `${path}: broken anchors`);
-          if (width < 768) {
+          if (width < 768 && path !== "/kling/") {
             const button = page.getByRole("button", { name: "Abrir menú" });
             await button.click();
             assert.equal(await button.getAttribute("aria-expanded"), "true");

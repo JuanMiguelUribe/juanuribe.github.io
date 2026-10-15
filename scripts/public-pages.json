@@ -46,5 +46,9 @@
   "/contenido-ia/": {
     "title": "Crear contenido con IA",
     "file": "contenido-ia/index.html"
+  },
+  "/kling/": {
+    "title": "Kling 4.0: qué cambia y dónde probarlo",
+    "file": "kling/index.html"
   }
 }
