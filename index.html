@@ -9,7 +9,7 @@
       content="Procesos, recursos y prácticas de IA con Juan Uribe. Aprende a crear con LLMs, imagen, video, música y automatización."
     />
     <link rel="canonical" href="https://juanuribeia.com/" />
-    <meta name="theme-color" content="#f7f8f4" />
+    <meta name="theme-color" content="#0B9FEF" />
     <meta property="og:title" content="Aprende IA creando | Juan Uribe" />
     <meta
       property="og:description"
@@ -62,14 +62,16 @@
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <link
       rel="preload"
-      href="/assets/fonts/archivo-latin-standard-normal.woff2"
+      href="/assets/fonts/BricolageGrotesque.ttf"
       as="font"
-      type="font/woff2"
+      type="font/ttf"
       crossorigin
     />
     <link rel="stylesheet" href="/assets/site.css" />
     <script src="/assets/site.js" defer></script>
     <script src="/assets/home.js" defer></script>
+    <link rel="stylesheet" href="/assets/cielo.css" />
+    <script src="/assets/cielo.js" defer></script>
   </head>
   <body class="site-page home">
     <a class="skip-link" href="#main-content">Saltar al contenido</a>
@@ -328,17 +330,53 @@
             Desde mi práctica con empresas de Estados Unidos y Colombia.
           </p>
         </div>
-        <figure class="hero-photo">
+        <div class="hero-playground">
+          <figure class="hero-photo">
+            <img
+              class="portrait"
+              src="/assets/juan-uribe.webp"
+              width="1000"
+              height="1241"
+              alt="Juan Uribe"
+              fetchpriority="high"
+            />
+            <figcaption>Pruebo. Creo. Lo comparto.</figcaption>
+          </figure>
           <img
-            class="portrait"
-            src="/assets/juan-uribe.webp"
-            width="1000"
-            height="1241"
-            alt="Juan Uribe"
-            fetchpriority="high"
+            class="hero-mascot"
+            src="/assets/ruck/hola.svg"
+            width="248"
+            height="220"
+            alt=""
+            aria-hidden="true"
+          /><a class="hero-discovery" href="/kling/"
+            ><img
+              src="/kling/assets/king-card.jpg"
+              width="960"
+              height="540"
+              alt="Un pulpo gigante de cartas, ejemplo del corto oficial King Card de Kling" /><span
+              >Kling 4.0
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M5 19 19 5M5 5h14v14" /></svg></span></span></a
+          ><img
+            class="hero-spark"
+            src="/assets/ruck/crear.svg"
+            width="248"
+            height="220"
+            alt=""
+            aria-hidden="true"
           />
-          <figcaption>Pruebo. Creo. Lo comparto.</figcaption>
-        </figure>
+        </div>
       </section>
       <section class="section start-section">
         <div class="section-heading">
@@ -347,7 +385,15 @@
         </div>
         <div class="path-list">
           <a href="/aprender/llms/"
-            ><h3>Una idea mejor explicada.</h3>
+            ><img
+              class="path-ruck"
+              src="/assets/ruck/idea.svg"
+              width="248"
+              height="220"
+              loading="lazy"
+              alt=""
+              aria-hidden="true" />
+            <h3>Una idea mejor explicada.</h3>
             <p>Aprende a dar contexto a un LLM y a revisar sus respuestas.</p>
             <span
               >Trabajar con LLMs
@@ -363,7 +409,15 @@
               >
                 <path d="M5 19 19 5M5 5h14v14" /></svg></span></a
           ><a href="/aprender/imagen-y-video/"
-            ><h3>Una imagen que cobra vida.</h3>
+            ><img
+              class="path-ruck"
+              src="/assets/ruck/crear.svg"
+              width="248"
+              height="220"
+              loading="lazy"
+              alt=""
+              aria-hidden="true" />
+            <h3>Una imagen que cobra vida.</h3>
             <p>Del prompt a un personaje y de ese personaje al video.</p>
             <span
               >Crear imagen y video
@@ -379,7 +433,15 @@
               >
                 <path d="M5 19 19 5M5 5h14v14" /></svg></span></a
           ><a href="/aprender/automatizacion/"
-            ><h3>Una tarea que deja de repetirse.</h3>
+            ><img
+              class="path-ruck"
+              src="/assets/ruck/tiempo.svg"
+              width="248"
+              height="220"
+              loading="lazy"
+              alt=""
+              aria-hidden="true" />
+            <h3>Una tarea que deja de repetirse.</h3>
             <p>Entiende un flujo antes de automatizar tu trabajo.</p>
             <span
               >Explorar automatización

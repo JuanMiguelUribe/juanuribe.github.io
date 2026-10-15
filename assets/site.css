@@ -7,12 +7,12 @@
   font-display: swap;
 }
 :root {
-  --paper: #f7f8f4;
-  --ink: #18261f;
-  --muted: #535e56;
-  --accent: #245b43;
-  --line: #d2d9cf;
-  --surface: #e8ece4;
+  --paper: #f7fbff;
+  --ink: #173d56;
+  --muted: #46677d;
+  --accent: #0068d9;
+  --line: #c8e1f1;
+  --surface: #ddf2ff;
   --font: Archivo, Arial, sans-serif;
   --display: var(--font);
   --bg: var(--paper);
@@ -510,10 +510,10 @@ button:active {
 }
 .case-feature p,
 .case-feature figcaption {
-  color: #c8d5ca;
+  color: #46677d;
 }
 .case-feature .overline {
-  color: #c8d5ca;
+  color: #46677d;
 }
 .case-feature .text-link {
   color: var(--paper);
@@ -607,7 +607,7 @@ button:active {
   width: 100%;
   min-height: 48px;
   padding: 12px;
-  border: 1px solid #9ca998;
+  border: 1px solid #83adc9;
   border-radius: 4px;
   background: transparent;
   color: var(--ink);
@@ -703,7 +703,7 @@ button:active {
   max-width: 610px;
 }
 .follow-band p {
-  color: #e4ebe2;
+  color: #f2faff;
   max-width: 560px;
   margin-top: 20px;
 }
@@ -791,7 +791,7 @@ button:active {
   padding: 16px 18px;
   min-height: 52px;
   background: transparent;
-  border: 1px solid #9ca998;
+  border: 1px solid #83adc9;
   border-radius: 4px;
   color: var(--ink);
 }

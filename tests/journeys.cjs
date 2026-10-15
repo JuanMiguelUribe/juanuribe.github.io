@@ -24,7 +24,7 @@ const base = process.env.SITE_URL || "http://127.0.0.1:8000";
     console.log("PASS home → learning route → LLM practice");
 
     await page.goto(base + "/recursos/");
-    assert.equal(await page.locator("[data-resource]:visible").count(), 8);
+    assert.equal(await page.locator("[data-resource]:visible").count(), 9);
     await page
       .getByRole("button", { name: "Automatizar", exact: true })
       .click();
@@ -38,7 +38,7 @@ const base = process.env.SITE_URL || "http://127.0.0.1:8000";
     await page.locator("#resource-search").fill("sin-coincidencias-123");
     assert.equal(await page.locator("#resource-empty").isVisible(), true);
     await page.getByRole("button", { name: "Ver todos los recursos" }).click();
-    assert.equal(await page.locator("[data-resource]:visible").count(), 8);
+    assert.equal(await page.locator("[data-resource]:visible").count(), 9);
     assert.equal(
       await page
         .locator("#resource-search")
@@ -136,7 +136,7 @@ const base = process.env.SITE_URL || "http://127.0.0.1:8000";
     const noJS = await browser.newContext({ javaScriptEnabled: false });
     const fallback = await noJS.newPage();
     await fallback.goto(base + "/recursos/");
-    assert.equal(await fallback.locator("[data-resource]:visible").count(), 8);
+    assert.equal(await fallback.locator("[data-resource]:visible").count(), 9);
     assert.equal(
       await fallback.locator(".library-controls").isVisible(),
       false,
